@@ -13,7 +13,7 @@
 ---
 
 ## 주요 기능 ##
-[IROS5_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30](https://www.data.go.kr/data/3037286/fileData.do)에서 제공하는 오퍼레이션에 대한 기능을 제공합니다.
+[IROS5_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30](https://www.data.go.kr/data/3037286/openapi.do)에서 제공하는 오퍼레이션에 대한 기능을 제공합니다.
 
 ---
 
