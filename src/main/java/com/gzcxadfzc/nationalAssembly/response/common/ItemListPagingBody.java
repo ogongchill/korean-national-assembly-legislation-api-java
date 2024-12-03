@@ -1,15 +1,8 @@
 package com.gzcxadfzc.nationalAssembly.response.common;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import lombok.Data;
 
-import java.util.List;
-
-@Data
-public class Body<T> {
-    @JacksonXmlProperty(localName = "items")
-    private List<T> items;
-
+public class ItemListPagingBody<T> extends ItemListBody<T> {
     @JacksonXmlProperty(localName = "numOfRows")
     private Integer numOfRows;
 

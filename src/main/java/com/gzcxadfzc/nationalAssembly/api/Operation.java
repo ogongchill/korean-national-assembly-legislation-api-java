@@ -3,15 +3,11 @@ package com.gzcxadfzc.nationalAssembly.api;
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>에 따른 오퍼레이션 명임
  */
-public enum OperationName {
-
-    /**
-     * @see com.gzcxadfzc.nationalAssembly.request.BillInfoListRequest
-     */
+public enum Operation {
     getBillInfoList("의안 목록 검색"),
     getRecentRceptList("최근 접수의안 목록 정보조회"),
     getRecentPasageList("최근 통과의안 목록 정보조회"),
-    getJsictionComiteeProcessList("처리의안 목록 정보 조회"),
+    getJsictionComiteProcessList("처리의안 목록 정보 조회"),
     getRecentMoorList("계류의안 목록 정보조회"),
     getSessionRequestList("본회의부의요청안건 목록 정보조회"),
     getBillReceiptInfo("의안 접수 정보조회"),
@@ -48,7 +44,7 @@ public enum OperationName {
 
     private final String korName;
 
-    OperationName(String korName) {
+    Operation(String korName) {
         this.korName = korName;
     }
 }

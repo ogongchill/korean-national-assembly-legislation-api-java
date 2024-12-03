@@ -3,7 +3,7 @@ package com.gzcxadfzc.nationalAssembly.code;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
-/*
+/**
 본회의처리결과 코드
  */
 public enum PlenarySessionResultCode {

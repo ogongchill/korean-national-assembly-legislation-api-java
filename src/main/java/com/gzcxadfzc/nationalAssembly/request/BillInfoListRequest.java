@@ -1,9 +1,16 @@
 package com.gzcxadfzc.nationalAssembly.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.gzcxadfzc.nationalAssembly.code.ProposerCode;
+import com.gzcxadfzc.nationalAssembly.api.Operation;
 import lombok.Builder;
 import lombok.Data;
+
+/**
+ * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getBillInfoList</code>오퍼레이션의 요청 파라미터임
+ * @see Operation
+ * @see com.gzcxadfzc.nationalAssembly.response.BillInfoListResponse
+ * @see com.gzcxadfzc.nationalAssembly.response.item.BillInfoListItem
+ */
 
 @Data
 @Builder
@@ -148,7 +155,7 @@ public class BillInfoListRequest {
      * <code>F04</code> 의장<br>
      * <code>F05</code> 기타<br>
      */
-    private ProposerCode proposerCode;
+    private String proposerCode;
 
     /**
      * <p>소관위처리결과</p>

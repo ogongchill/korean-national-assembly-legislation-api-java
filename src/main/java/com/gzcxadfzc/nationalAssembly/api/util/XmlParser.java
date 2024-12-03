@@ -1,20 +1,17 @@
 package com.gzcxadfzc.nationalAssembly.api.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.gzcxadfzc.nationalAssembly.api.exception.UnexpectedResponseException;
-import com.gzcxadfzc.nationalAssembly.response.common.PublicDataNationalAssemblyResponse;
 
 public class XmlParser {
     private static final XmlMapper MAPPER = new XmlMapper();
 
-    public static <T> PublicDataNationalAssemblyResponse<T> parse(String data) {
+    public <T> T parse(String data, Class<T> type) {
         try {
-            TypeReference<PublicDataNationalAssemblyResponse<T>> typeReference = new TypeReference<>() {};
-            return MAPPER.readValue(data, typeReference);
+            return MAPPER.readValue(data, type);
         } catch (JsonProcessingException e) {
-            throw new UnexpectedResponseException(e, data, PublicDataNationalAssemblyResponse.class.descriptorString());
+            throw new UnexpectedResponseException(e, data, type.getCanonicalName());
         }
     }
 }

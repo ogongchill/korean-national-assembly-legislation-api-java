@@ -3,7 +3,7 @@ package com.gzcxadfzc.nationalAssembly.response.item;
 import lombok.Data;
 
 @Data
-public class RecentBillItem {
+public class BillInfoListItem {
     /**
      * 의안ID
      */
@@ -12,7 +12,7 @@ public class RecentBillItem {
     /**
      * 의안번호
      */
-    private Long billNo;
+    private String billNo;
 
     /**
      * 처리구분
