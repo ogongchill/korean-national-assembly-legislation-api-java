@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.gzcxadfzc"
+group = "com.joebakk"
 version = "1.0-SNAPSHOT"
 
 repositories {
