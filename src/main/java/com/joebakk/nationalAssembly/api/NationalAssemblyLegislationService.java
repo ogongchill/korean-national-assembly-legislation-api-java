@@ -2,10 +2,9 @@ package com.joebakk.nationalAssembly.api;
 
 import com.joebakk.nationalAssembly.api.util.UrlQueryParamConverter;
 import com.joebakk.nationalAssembly.api.util.XmlParser;
-import com.gzcxadfzc.nationalAssembly.request.*;
-import com.gzcxadfzc.nationalAssembly.response.*;
 import com.joebakk.nationalAssembly.request.*;
 import com.joebakk.nationalAssembly.response.*;
+import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -78,5 +77,17 @@ public class NationalAssemblyLegislationService implements NationalAssemblyLegis
         Request billPetitionMemberListRequest = UrlQueryParamConverter.createRequest(UrlConfig.getBillPetitionMemberListURLBuilder(), request);
         String responseBody = client.getResponseBodyString(billPetitionMemberListRequest);
         return XML_PARSER.parse(responseBody, BillPetitionMemberListResponse.class);
+    }
+
+    @Override
+    public BillPromulgationInfoResponse getBillPromulgationInfo(BillPromulgationInfoRequest request) {
+        String responseBody = getResponseBody(Operation.getBillPromulgationInfo, request);
+        return XML_PARSER.parse(responseBody, BillPromulgationInfoResponse.class);
+    }
+
+    private String getResponseBody(Operation operation, Object requestData) {
+        HttpUrl.Builder httpUrlBuilder = UrlConfig.getUrlBuilder(operation);
+        Request request = UrlQueryParamConverter.createRequest(httpUrlBuilder, requestData);
+        return client.getResponseBodyString(request);
     }
 }

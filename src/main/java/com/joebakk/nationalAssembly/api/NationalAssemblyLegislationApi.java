@@ -1,11 +1,10 @@
 package com.joebakk.nationalAssembly.api;
 
-import com.gzcxadfzc.nationalAssembly.request.*;
-import com.gzcxadfzc.nationalAssembly.response.*;
 import com.joebakk.nationalAssembly.request.*;
 import com.joebakk.nationalAssembly.response.*;
 
-public interface NationalAssemblyLegislationApi {
+public interface
+NationalAssemblyLegislationApi {
     BillInfoListResponse getBillInfoList(BillInfoListRequest request);
     RecentRceptListResponse getRecentRceptList(RecentRceptListRequest request);
     RecentPasageListResponse getRecentPasageList(RecentPasageListRequest request);
@@ -14,4 +13,5 @@ public interface NationalAssemblyLegislationApi {
     SessionRequestResponse getSessionRequestList(SessionRequestListRequest request);
     BillReceiptInfoResponse getBillReceiptInfo(BillReceiptInfoRequest request);
     BillPetitionMemberListResponse getBillPetitionMemberList(BillPetitionMemberListRequest request);
+    BillPromulgationInfoResponse getBillPromulgationInfo(BillPromulgationInfoRequest request);
 }

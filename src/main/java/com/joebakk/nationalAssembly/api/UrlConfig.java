@@ -45,4 +45,8 @@ public class UrlConfig {
     public static HttpUrl.Builder getBillPetitionMemberListURLBuilder() {
         return getBaseUrlBuilder().addEncodedPathSegment(Operation.getBillPetitionMemberList.name());
     }
+
+    public static HttpUrl.Builder getUrlBuilder(Operation operation) {
+        return getBaseUrlBuilder().addPathSegment(operation.name());
+    }
 }

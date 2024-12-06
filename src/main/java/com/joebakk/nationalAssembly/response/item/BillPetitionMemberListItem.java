@@ -9,7 +9,6 @@ import lombok.Data;
  * @see BillInfoListRequest
  * @see Operation
  */
-
 @Data
 public class BillPetitionMemberListItem {
     /**<p>구분1</p>
