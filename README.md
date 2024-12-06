@@ -57,7 +57,7 @@
 | **getPetitionStatic** | 청원 통계 정보 조회 | 🔲 |
 | **getAnnualReportList** | 연차보고서 목록 정보 조회 | 🔲 |
 | **getAnnualReportDetail** | 연차보고서 세부 정보 조회 | 🔲 |
-| **getBillPromulgationInfo** | 의안 공포 정보 조회 | 🔲 |
+| **getBillPromulgationInfo** | 의안 공포 정보 조회 | ✅ |
 
 ---
 
