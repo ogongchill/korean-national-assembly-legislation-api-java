@@ -1,5 +1,7 @@
 package com.joebakk.nationalAssembly.api;
 
+import okhttp3.HttpUrl;
+
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>에 따른 오퍼레이션 명임
  */
@@ -42,9 +44,20 @@ public enum Operation {
     getAnnualReportDetail("연차보고서 세부 정보조회"),
     getBillPromulgationInfo("의안 공포 정보조회");
 
+    private static final HttpUrl BASE_URL_BUILDER = new HttpUrl.Builder()
+            .scheme("https")
+            .host("apis.data.go.kr")
+            .addPathSegment("9710000")
+            .addPathSegment("BillInfoService2")
+            .build();
     private final String korName;
 
     Operation(String korName) {
         this.korName = korName;
+    }
+
+    public HttpUrl.Builder httpUrlBuilder() {
+        return BASE_URL_BUILDER.newBuilder()
+                .addPathSegment(this.name());
     }
 }
