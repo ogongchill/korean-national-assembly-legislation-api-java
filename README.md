@@ -8,7 +8,6 @@
 ## 외부 라이브러리 ##
 - **okhttp**: `4.12.0`
 - **jackson-dataformat-xml**: `2.18.1`
-- **lombok**: `1.18.36`
 
 ---
 
