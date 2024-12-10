@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
 import com.ogongchill.nationalAssembly.core.response.item.SessionRequestListItem;
+import com.ogongchill.nationalAssembly.service.code.BillCode;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getSessionRequestList</code>요청 파라미터임
@@ -89,8 +90,8 @@ public class SessionRequestListRequest {
             return this;
         }
 
-        public Builder billKindCd(String bill_kind_cd) {
-            this.bill_kind_cd = bill_kind_cd;
+        public Builder billKindCd(BillCode billCode) {
+            this.bill_kind_cd = billCode.name();
             return this;
         }
 
