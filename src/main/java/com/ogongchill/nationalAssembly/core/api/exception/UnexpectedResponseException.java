@@ -1,9 +1,7 @@
 package com.ogongchill.nationalAssembly.core.api.exception;
 
-import lombok.Getter;
-
-@Getter
 public class UnexpectedResponseException extends RuntimeException {
+
     private final String actual;
     private final String expected;
 
@@ -11,5 +9,13 @@ public class UnexpectedResponseException extends RuntimeException {
         super(cause);
         this.actual = actual;
         this.expected = expected;
+    }
+
+    public String getActual() {
+        return actual;
+    }
+
+    public String getExpected() {
+        return expected;
     }
 }

@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
 import com.ogongchill.nationalAssembly.core.response.item.SessionRequestListItem;
-import lombok.Builder;
-import lombok.Data;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getSessionRequestList</code>요청 파라미터임
@@ -13,8 +11,6 @@ import lombok.Data;
  * @see SessionRequestResponse
  * @see SessionRequestListItem
  */
-@Data
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SessionRequestListRequest {
     /**
@@ -56,4 +52,84 @@ public class SessionRequestListRequest {
      * 의안명
      */
     private String bll_name;
+
+    private SessionRequestListRequest(Builder builder) {
+        this.numOfRows = builder.numOfRows;
+        this.pageNo = builder.pageNo;
+        this.start_age_cd = builder.start_age_cd;
+        this.bill_kind_cd = builder.bill_kind_cd;
+        this.curr_committee = builder.curr_committee;
+        this.bll_name = builder.bll_name;
+    }
+
+    public static Builder newBuilder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Integer numOfRows;
+        private Integer pageNo;
+        private Integer start_age_cd;
+        private String bill_kind_cd;
+        private String curr_committee;
+        private String bll_name;
+
+        public Builder numOfRows(Integer numOfRows) {
+            this.numOfRows = numOfRows;
+            return this;
+        }
+
+        public Builder pageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        public Builder startAgeCd(Integer start_age_cd) {
+            this.start_age_cd = start_age_cd;
+            return this;
+        }
+
+        public Builder billKindCd(String bill_kind_cd) {
+            this.bill_kind_cd = bill_kind_cd;
+            return this;
+        }
+
+        public Builder currCommittee(String curr_committee) {
+            this.curr_committee = curr_committee;
+            return this;
+        }
+
+        public Builder bllName(String bll_name) {
+            this.bll_name = bll_name;
+            return this;
+        }
+
+        public SessionRequestListRequest build() {
+            return new SessionRequestListRequest(this);
+        }
+    }
+
+    public Integer getNumOfRows() {
+        return numOfRows;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public Integer getStart_age_cd() {
+        return start_age_cd;
+    }
+
+    public String getBill_kind_cd() {
+        return bill_kind_cd;
+    }
+
+    public String getCurr_committee() {
+        return curr_committee;
+    }
+
+    public String getBll_name() {
+        return bll_name;
+    }
 }

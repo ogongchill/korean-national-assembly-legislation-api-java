@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
-import lombok.Builder;
-import lombok.Data;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getBillInfoList</code>오퍼레이션의 요청 파라미터임
@@ -13,9 +11,6 @@ import lombok.Data;
  * @see BillInfoListResponse
  * @see BillInfoListItem
  */
-
-@Data
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BillInfoListRequest {
     /**
@@ -61,7 +56,7 @@ public class BillInfoListRequest {
     /**
      * <p>마지막 대수</p>
      * 18대 ~ 22대 국회에서 제안된 의안목록 조회시<br>
-     * <code>start_ord = 18</code>, <code>end_ord = 22</code>
+     * <code>start_ord = 18</code>; <code>end_ord = 22</code>
      */
     private Integer end_ord;
 
@@ -222,5 +217,313 @@ public class BillInfoListRequest {
      * <code>true</code>
      * <code>false</code>
      */
-    private String budget; // 비용추계서유무
+    private String budget;
+
+    private BillInfoListRequest(Builder builder) {
+        this.numOfRows = builder.numOfRows;
+        this.pageNo = builder.pageNo;
+        this.mem_name_check = builder.mem_name_check;
+        this.mem_name = builder.mem_name;
+        this.hj_name = builder.hj_name;
+        this.ord = builder.ord;
+        this.start_ord = builder.start_ord;
+        this.end_ord = builder.end_ord;
+        this.start_propose_num = builder.start_propose_num;
+        this.end_propose_num = builder.end_propose_num;
+        this.propose_num = builder.propose_num;
+        this.start_propose_date = builder.start_propose_date;
+        this.end_propose_date = builder.end_propose_date;
+        this.start_committee_dt = builder.start_committee_dt;
+        this.end_committee_dt = builder.end_committee_dt;
+        this.bill_kind_cd = builder.bill_kind_cd;
+        this.curr_committee = builder.curr_committee;
+        this.proposerCode = builder.proposerCode;
+        this.p_proc_result_cd = builder.p_proc_result_cd;
+        this.b_proc_result_cd = builder.b_proc_result_cd;
+        this.bill_name = builder.bill_name;
+        this.gbn = builder.gbn;
+        this.amendmentyn = builder.amendmentyn;
+        this.budget = builder.budget;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Integer numOfRows;
+        private Integer pageNo;
+        private String mem_name_check;
+        private String mem_name;
+        private String hj_name;
+        private Integer ord;
+        private Integer start_ord;
+        private Integer end_ord;
+        private Integer process_num;
+        private Integer start_process_num;
+        private Integer end_process_num;
+        private Integer propose_num;
+        private Integer start_propose_num;
+        private Integer end_propose_num;
+        private String start_propose_date;
+        private String end_propose_date;
+        private String start_committee_dt;
+        private String end_committee_dt;
+        private String bill_kind_cd;
+        private String curr_committee;
+        private String proposerCode;
+        private String p_proc_result_cd;
+        private String b_proc_result_cd;
+        private String bill_name;
+        private String gbn;
+        private String amendmentyn;
+        private String budget;
+
+        public Builder numOfRows(Integer numOfRows) {
+            this.numOfRows = numOfRows;
+            return this;
+        }
+
+        public Builder pageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        public Builder memNameCheck(String mem_name_check) {
+            this.mem_name_check = mem_name_check;
+            return this;
+        }
+
+        public Builder memName(String mem_name) {
+            this.mem_name = mem_name;
+            return this;
+        }
+
+        public Builder hjName(String hj_name) {
+            this.hj_name = hj_name;
+            return this;
+        }
+
+        public Builder ord(Integer ord) {
+            this.ord = ord;
+            return this;
+        }
+
+        public Builder startOrd(Integer start_ord) {
+            this.start_ord = start_ord;
+            return this;
+        }
+
+        public Builder endOrd(Integer end_ord) {
+            this.end_ord = end_ord;
+            return this;
+        }
+
+        public Builder processNum(Integer process_num) {
+            this.process_num = process_num;
+            return this;
+        }
+
+        public Builder startProcessNum(Integer start_process_num) {
+            this.start_process_num = start_process_num;
+            return this;
+        }
+
+        public Builder endProcessNum(Integer end_process_num) {
+            this.end_process_num = end_process_num;
+            return this;
+        }
+
+        public Builder proposeNum(Integer propose_num) {
+            this.propose_num = propose_num;
+            return this;
+        }
+
+        public Builder startProposeNum(Integer start_propose_num) {
+            this.start_propose_num = start_propose_num;
+            return this;
+        }
+
+        public Builder endProposeNum(Integer end_propose_num) {
+            this.end_propose_num = end_propose_num;
+            return this;
+        }
+
+        public Builder startProposeDate(String start_propose_date) {
+            this.start_propose_date = start_propose_date;
+            return this;
+        }
+
+        public Builder endProposeDate(String end_propose_date) {
+            this.end_propose_date = end_propose_date;
+            return this;
+        }
+
+        public Builder startCommitteeDt(String start_committee_dt) {
+            this.start_committee_dt = start_committee_dt;
+            return this;
+        }
+
+        public Builder endCommitteeDt(String end_committee_dt) {
+            this.end_committee_dt = end_committee_dt;
+            return this;
+        }
+
+        public Builder billKindCd(String bill_kind_cd) {
+            this.bill_kind_cd = bill_kind_cd;
+            return this;
+        }
+
+        public Builder currCommittee(String curr_committee) {
+            this.curr_committee = curr_committee;
+            return this;
+        }
+
+        public Builder proposerCode(String proposerCode) {
+            this.proposerCode = proposerCode;
+            return this;
+        }
+
+        public Builder pProcResultCd(String p_proc_result_cd) {
+            this.p_proc_result_cd = p_proc_result_cd;
+            return this;
+        }
+
+        public Builder bProcResultCd(String b_proc_result_cd) {
+            this.b_proc_result_cd = b_proc_result_cd;
+            return this;
+        }
+
+        public Builder billName(String bill_name) {
+            this.bill_name = bill_name;
+            return this;
+        }
+
+        public Builder gbn(String gbn) {
+            this.gbn = gbn;
+            return this;
+        }
+
+        public Builder amendmentyn(String amendmentyn) {
+            this.amendmentyn = amendmentyn;
+            return this;
+        }
+
+        public Builder budget(String budget) {
+            this.budget = budget;
+            return this;
+        }
+
+        public BillInfoListRequest build() {
+            return new BillInfoListRequest(this);
+        }
+    }
+
+    public Integer getNumOfRows() {
+        return numOfRows;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public String getMemNameCheck() {
+        return mem_name_check;
+    }
+
+    public String getMemName() {
+        return mem_name;
+    }
+
+    public String getHjName() {
+        return hj_name;
+    }
+
+    public Integer getOrd() {
+        return ord;
+    }
+
+    public Integer getStartOrd() {
+        return start_ord;
+    }
+
+    public Integer getEndOrd() {
+        return end_ord;
+    }
+
+    public Integer getProcessNum() {
+        return process_num;
+    }
+
+    public Integer getStartProcessNum() {
+        return start_process_num;
+    }
+
+    public Integer getEndProcessNum() {
+        return end_process_num;
+    }
+
+    public Integer getProposeNum() {
+        return propose_num;
+    }
+
+    public Integer getStartProposeNum() {
+        return start_propose_num;
+    }
+
+    public Integer getEndProposeNum() {
+        return end_propose_num;
+    }
+
+    public String getStartProposeDate() {
+        return start_propose_date;
+    }
+
+    public String getEndProposeDate() {
+        return end_propose_date;
+    }
+
+    public String getStartCommitteeDt() {
+        return start_committee_dt;
+    }
+
+    public String getEndCommitteeDt() {
+        return end_committee_dt;
+    }
+
+    public String getBillKindCd() {
+        return bill_kind_cd;
+    }
+
+    public String getCurrCommittee() {
+        return curr_committee;
+    }
+
+    public String getProposerCode() {
+        return proposerCode;
+    }
+
+    public String pProcResultCd() {
+        return p_proc_result_cd;
+    }
+
+    public String bProcResultCd() {
+        return b_proc_result_cd;
+    }
+
+    public String getBillName() {
+        return bill_name;
+    }
+
+    public String getGbn() {
+        return gbn;
+    }
+
+    public String getAmendmentyn() {
+        return amendmentyn;
+    }
+
+    public String getBudget() {
+        return budget;
+    }
 }

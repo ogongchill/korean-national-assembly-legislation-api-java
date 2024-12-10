@@ -8,9 +8,13 @@ import com.ogongchill.nationalAssembly.core.api.exception.UnexpectedResponseExce
 import com.ogongchill.nationalAssembly.core.response.error.ErrorResponse;
 
 public class XmlParser {
+
     private static final XmlMapper MAPPER = new XmlMapper();
 
-    public <T> T parse(String data, Class<T> type) {
+    private XmlParser() { // no instances
+    }
+
+    public static <T> T parse(String data, Class<T> type) {
         try {
             throwIfErrorResponse(data);
             return MAPPER.readValue(data, type);

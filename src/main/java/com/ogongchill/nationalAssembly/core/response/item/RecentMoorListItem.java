@@ -1,46 +1,13 @@
 package com.ogongchill.nationalAssembly.core.response.item;
 
-import lombok.Data;
-
-@Data
-public class RecentMoorListItem {
-    /**
-     * 의안 ID
-     */
-    private String billId;
-
-    /**
-     * 의안번호
-     */
-    private String billNo;
-
-    /**
-     * 의안명
-     */
-    private String billName;
-
-    /**
-     * 제안자
-     */
-    private String proposer;
-
-    /**
-     * 제안자구분
-     */
-    private String proposerKind;
-
-    /**
-     * 제안일
-     */
-    private String proposeDt;
-
-    /**
-     * 회부일
-     */
-    private String submitDt;
-
-    /**
-     * 소관위원회
-     */
-    private String committeeName;
+public record RecentMoorListItem(
+    String billId, // 의안 ID
+    String billNo, // 의안번호
+    String billName, // 의안명
+    String proposer, // 제안자
+    String proposerKind, // 제안자구분
+    String proposeDt, // 제안일
+    String submitDt, // 회부일
+    String committeeName // 소관위원회
+) {
 }
