@@ -62,7 +62,7 @@ public class RecentMoorListRequest {
         this.start_age_cd = builder.start_age_cd;
     }
 
-    public static Builder newBuilder() {
+    public static Builder builder() {
         return new Builder();
     }
 

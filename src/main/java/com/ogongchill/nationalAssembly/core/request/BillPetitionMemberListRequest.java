@@ -55,7 +55,7 @@ public class BillPetitionMemberListRequest {
         private Builder() {
         }
 
-        public Builder bill_id(String bill_id) {
+        public Builder billId(String bill_id) {
             this.bill_id = bill_id;
             return this;
         }

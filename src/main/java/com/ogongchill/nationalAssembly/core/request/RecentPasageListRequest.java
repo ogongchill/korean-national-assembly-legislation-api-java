@@ -34,7 +34,7 @@ public class RecentPasageListRequest {
         this.bill_name = builder.bill_name;
     }
 
-    public static Builder newBuilder() {
+    public static Builder builder() {
         return new Builder();
     }
 

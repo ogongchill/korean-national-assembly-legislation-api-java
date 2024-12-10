@@ -62,7 +62,7 @@ public class SessionRequestListRequest {
         this.bll_name = builder.bll_name;
     }
 
-    public static Builder newBuilder() {
+    public static Builder builder() {
         return new Builder();
     }
 
