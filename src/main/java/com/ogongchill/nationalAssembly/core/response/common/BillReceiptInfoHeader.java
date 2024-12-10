@@ -14,4 +14,20 @@ public class BillReceiptInfoHeader extends Header {
 
     @JacksonXmlProperty(localName = "responseTime")
     private String responseTime;
+
+    public String getSuccessYN() {
+        return successYN;
+    }
+
+    public String getRequestMsgID() {
+        return requestMsgID;
+    }
+
+    public String getResponseMsgID() {
+        return responseMsgID;
+    }
+
+    public String getResponseTime() {
+        return responseTime;
+    }
 }

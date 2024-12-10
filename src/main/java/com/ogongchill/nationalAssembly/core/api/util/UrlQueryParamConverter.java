@@ -11,6 +11,9 @@ import java.util.Map;
 public class UrlQueryParamConverter {
     public static final ObjectMapper MAPPER = new ObjectMapper();
 
+    private UrlQueryParamConverter() { // no instances
+    }
+
     public static Request createRequest(Operation operation, Object requestData) {
         HttpUrl.Builder builder = operation.httpUrlBuilder();
         MAPPER.convertValue(requestData, new TypeReference<Map<String, Object>>() {})

@@ -1,53 +1,15 @@
 package com.ogongchill.nationalAssembly.core.response.item;
 
-public class JsictionComiteProcessListItem {
-    /**
-     * 의안 ID
-     */
-    private String billId;
-
-    /**
-     * 의안번호
-     */
-    private String billNo;
-
-    /**
-     * 의안명
-     */
-    private String billName;
-
-    /**
-     * 제안자
-     */
-    private String proposer;
-
-    /**
-     * 제안자구분
-     */
-    private String proposerKind;
-
-    /**
-     * 제안일
-     */
-    private String proposeDt;
-
-    /**
-     * 회부일
-     */
-    private String submitDt;
-
-    /**
-     * 소관위원회
-     */
-    private String committeeName;
-
-    /**
-     * 의결일자
-     */
-    private String procDt;
-
-    /**
-     * 의결결과
-     */
-    private String generalResult;
+public record JsictionComiteProcessListItem(
+    String billId, // 의안 ID
+    String billNo, // 의안번호
+    String billName, // 의안명
+    String proposer, // 제안자
+    String proposerKind, // 제안자구분
+    String proposeDt, // 제안일
+    String submitDt, // 회부일
+    String committeeName, // 소관위원회
+    String procDt, // 의결일자
+    String generalResult // 의결결과
+) {
 }

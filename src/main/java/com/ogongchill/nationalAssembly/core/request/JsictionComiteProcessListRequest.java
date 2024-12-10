@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.JsictionComiteProcessListItem;
-import lombok.Builder;
-import lombok.Data;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getJsictionComiteProcessList</code>오퍼레이션의 요청 파라미터임
@@ -13,8 +11,6 @@ import lombok.Data;
  * @see JsictionComiteProcessListResponse
  * @see JsictionComiteProcessListItem
  */
-@Data
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class JsictionComiteProcessListRequest {
     /**
@@ -51,4 +47,73 @@ public class JsictionComiteProcessListRequest {
      * <code>gbn=C06</code> 검색 후 <code>committeeCode</code>참조
      */
     private String curr_committee;
+
+    private JsictionComiteProcessListRequest(Builder builder) {
+        this.numOfRows = builder.numOfRows;
+        this.pageNo = builder.pageNo;
+        this.start_age_cd = builder.start_age_cd;
+        this.bill_kind_cd = builder.bill_kind_cd;
+        this.curr_committee = builder.curr_committee;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Integer numOfRows;
+        private Integer pageNo;
+        private Integer start_age_cd;
+        private String bill_kind_cd;
+        private String curr_committee;
+
+        public Builder numOfRows(Integer numOfRows) {
+            this.numOfRows = numOfRows;
+            return this;
+        }
+
+        public Builder pageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        public Builder startAgeCd(Integer start_age_cd) {
+            this.start_age_cd = start_age_cd;
+            return this;
+        }
+
+        public Builder billKindCd(String bill_kind_cd) {
+            this.bill_kind_cd = bill_kind_cd;
+            return this;
+        }
+
+        public Builder currCommittee(String curr_committee) {
+            this.curr_committee = curr_committee;
+            return this;
+        }
+
+        public JsictionComiteProcessListRequest build() {
+            return new JsictionComiteProcessListRequest(this);
+        }
+    }
+
+    public Integer getNumOfRows() {
+        return numOfRows;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public Integer getStartAgeCd() {
+        return start_age_cd;
+    }
+
+    public String getBillKindCd() {
+        return bill_kind_cd;
+    }
+
+    public String getCurrCommittee() {
+        return curr_committee;
+    }
 }

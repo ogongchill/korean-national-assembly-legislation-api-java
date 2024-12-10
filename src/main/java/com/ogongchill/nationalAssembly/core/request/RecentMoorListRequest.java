@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.RecentMoorListItem;
-import lombok.Builder;
-import lombok.Data;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getRecentMoorListRequest</code>오퍼레이션의 요청 파라미터임
@@ -13,8 +11,6 @@ import lombok.Data;
  * @see RecentMoorListResponse
  * @see RecentMoorListItem
  */
-@Data
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RecentMoorListRequest {
     /**
@@ -56,4 +52,84 @@ public class RecentMoorListRequest {
      * 대수
      */
     private Integer start_age_cd;
+
+    private RecentMoorListRequest(Builder builder) {
+        this.numOfRows = builder.numOfRows;
+        this.pageNo = builder.pageNo;
+        this.bill_kind_cd = builder.bill_kind_cd;
+        this.curr_committee = builder.curr_committee;
+        this.bill_name = builder.bill_name;
+        this.start_age_cd = builder.start_age_cd;
+    }
+
+    public static Builder newBuilder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private Integer numOfRows;
+        private Integer pageNo;
+        private String bill_kind_cd;
+        private String curr_committee;
+        private String bill_name;
+        private Integer start_age_cd;
+
+        public Builder numOfRows(Integer numOfRows) {
+            this.numOfRows = numOfRows;
+            return this;
+        }
+
+        public Builder pageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        public Builder billKindCd(String bill_kind_cd) {
+            this.bill_kind_cd = bill_kind_cd;
+            return this;
+        }
+
+        public Builder currCommittee(String curr_committee) {
+            this.curr_committee = curr_committee;
+            return this;
+        }
+
+        public Builder billName(String bill_name) {
+            this.bill_name = bill_name;
+            return this;
+        }
+
+        public Builder startAgeCd(Integer start_age_cd) {
+            this.start_age_cd = start_age_cd;
+            return this;
+        }
+
+        public RecentMoorListRequest build() {
+            return new RecentMoorListRequest(this);
+        }
+    }
+
+    public Integer getNumOfRows() {
+        return numOfRows;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public String getBillKindCd() {
+        return bill_kind_cd;
+    }
+
+    public String getCurrCommittee() {
+        return curr_committee;
+    }
+
+    public String getBillName() {
+        return bill_name;
+    }
+
+    public Integer getStartAgeCd() {
+        return start_age_cd;
+    }
 }

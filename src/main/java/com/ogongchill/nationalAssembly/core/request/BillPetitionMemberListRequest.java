@@ -4,17 +4,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
 import com.ogongchill.nationalAssembly.core.response.item.BillPetitionMemberListItem;
-import lombok.Builder;
-import lombok.Data;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getBillPetitionMemberList</code>오퍼레이션의 요청 파라미터임
  * @see Operation
  * @see BillPetitionMemberListItem
  */
-
-@Data
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BillPetitionMemberListRequest {
     /**
@@ -41,4 +36,54 @@ public class BillPetitionMemberListRequest {
      * 각 파라미터 중복 불가
      */
     private String gbn2;
+
+    private BillPetitionMemberListRequest(Builder builder) {
+        this.bill_id = builder.bill_id;
+        this.gbn1 = builder.gbn1;
+        this.gbn2 = builder.gbn2;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String bill_id;
+        private String gbn1;
+        private String gbn2;
+
+        private Builder() {
+        }
+
+        public Builder bill_id(String bill_id) {
+            this.bill_id = bill_id;
+            return this;
+        }
+
+        public Builder gbn1(String gbn1) {
+            this.gbn1 = gbn1;
+            return this;
+        }
+
+        public Builder gbn2(String gbn2) {
+            this.gbn2 = gbn2;
+            return this;
+        }
+
+        public BillPetitionMemberListRequest build() {
+            return new BillPetitionMemberListRequest(this);
+        }
+    }
+
+    public String getBillId() {
+        return bill_id;
+    }
+
+    public String getGbn1() {
+        return gbn1;
+    }
+
+    public String getGbn2() {
+        return gbn2;
+    }
 }

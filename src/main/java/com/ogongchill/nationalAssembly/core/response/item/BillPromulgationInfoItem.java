@@ -1,26 +1,9 @@
 package com.ogongchill.nationalAssembly.core.response.item;
 
-import lombok.Data;
-
-@Data
-public class BillPromulgationInfoItem {
-    /**
-     * 공포 일자
-     */
-    private String announceDt;
-
-    /**
-     * 공포 번호
-     */
-    private String announceNo;
-
-    /**
-     * 공포 법률명
-     */
-    private String lawTitle;
-
-    /**
-     * 공포법률 Link url
-     */
-    private String lawBonUrl;
+public record BillPromulgationInfoItem(
+    String announceDt, // 공포 일자
+    String announceNo, // 공포 번호
+    String lawTitle, // 공포 법률명
+    String lawBonUrl // 공포법률 Link url
+) {
 }
