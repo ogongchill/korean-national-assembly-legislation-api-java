@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<response>
+    <header>
+        <requestMsgID/>
+        <responseTime>2016-01-20 14:06:08.68</responseTime>
+        <responseMsgID/>
+        <successYN/>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <item>
+            <receipt>
+                <billName>새만금사업 추진 및 지원에 관한 특별법 일부개정법률안</billName>
+                <billNo>1914691</billNo>
+                <bookHwpName>의안원문</bookHwpName>
+                <bookHwpUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=D325ADE2-2D0F-5ADA-A6CC-8CAED887658D&amp;type=0
+                </bookHwpUrl>
+                <bookPdfName>의안원문</bookPdfName>
+                <bookPdfUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=D325ADE2-2D0F-5ADA-A6CC-8CAED887658D&amp;type=1
+                </bookPdfUrl>
+                <notcostHwpName>비용추계서 미첨부 사유서</notcostHwpName>
+                <notcostHwpUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=997E35D7-39C6-A2EA-FAF2-FB3961D06BC1&amp;type=0
+                </notcostHwpUrl>
+                <notcostPdfName>비용추계서 미첨부 사유서</notcostPdfName>
+                <notcostPdfUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=997E35D7-39C6-A2EA-FAF2-FB3961D06BC1&amp;type=1
+                </notcostPdfUrl>
+                <proposeDt>2015-04-13</proposeDt>
+                <proposePeriod>제19대 (2012~2016) 제332 회</proposePeriod>
+                <proposer>강동원의원 등 14인</proposer>
+                <summaryLink>
+                    http://likms.assembly.go.kr/bill/jsp/SummaryPopup.jsp?bill_id=PRC_V1D5J0T4C1Y3A1Q7Q3L8U4J0S5L1M6
+                </summaryLink>
+                <withdrawDate/>
+            </receipt>
+        </item>
+    </body>
+</response>

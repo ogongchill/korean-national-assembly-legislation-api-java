@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <billHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=5EF91CA3-F6A8-14C1-57B4-4F22F7087C12&amp;type=0
+                </billHwpLink>
+                <billId>PRC_M1X5Y1C1Q1F0B1V6X0E5K0V0P9E6V7</billId>
+                <billName>조세특례제한법 일부개정법률안</billName>
+                <billNo>1917666</billNo>
+                <billPdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=5EF91CA3-F6A8-14C1-57B4-4F22F7087C12&amp;type=1
+                </billPdfLink>
+                <committeeName>기획재정위원회</committeeName>
+                <judgeHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=0E0ED8C3-47AC-606E-040F-EA9C5603B9BE&amp;type=0
+                </judgeHwpLink>
+                <judgePdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=0E0ED8C3-47AC-606E-040F-EA9C5603B9BE&amp;type=1
+                </judgePdfLink>
+            </item>
+            <item>
+                <billHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=2807A39B-54F3-67F4-D436-977F8CA2C3F0&amp;type=0
+                </billHwpLink>
+                <billId>PRC_R1X5L0I7R0L9H1V6B1F7K3O9W2N3J8</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1916144</billNo>
+                <billPdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=2807A39B-54F3-67F4-D436-977F8CA2C3F0&amp;type=1
+                </billPdfLink>
+                <committeeName>국회운영위원회</committeeName>
+            </item>
+            <item>
+                <billHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=6C056A62-A705-022D-BE26-3BED26F56309&amp;type=0
+                </billHwpLink>
+                <billId>PRC_W1D4X1I1S0K3Q1H7K1C3Q2P6Q8H5F0</billId>
+                <billName>지역특화발전특구에 대한 규제특례법 일부개정법률안</billName>
+                <billNo>1912266</billNo>
+                <billPdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=6C056A62-A705-022D-BE26-3BED26F56309&amp;type=1
+                </billPdfLink>
+                <committeeName>산업통상자원위원회</committeeName>
+                <judgeHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=8DC9505D-0659-8E2A-A15F-B67F7006F265&amp;type=0
+                </judgeHwpLink>
+                <judgePdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=8DC9505D-0659-8E2A-A15F-B67F7006F265&amp;type=1
+                </judgePdfLink>
+                <reviewHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=2ACEB3E0-4CA4-7F20-7D41-4F3F53B0ADC9&amp;type=0
+                </reviewHwpLink>
+                <reviewPdflInk>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=2ACEB3E0-4CA4-7F20-7D41-4F3F53B0ADC9&amp;type=1
+                </reviewPdflInk>
+            </item>
+            <item>
+                <billHwpLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=CDEA0B0D-5CD6-B039-926D-57DCB3EC83C0&amp;type=0
+                </billHwpLink>
+                <billId>PRC_Q1L4T0S7P0J9W1F8J5W1Z0X3B2A1K4</billId>
+                <billName>국정감사 및 조사에 관한 법률 일부개정법률안</billName>
+                <billNo>1911162</billNo>
+                <billPdfLink>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=CDEA0B0D-5CD6-B039-926D-57DCB3EC83C0&amp;type=1
+                </billPdfLink>
+                <committeeName>국회운영위원회</committeeName>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>4</totalCount>
+    </body>
+</response>

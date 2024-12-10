@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<response>
+    <header>
+        <requestMsgID/>
+        <responseTime>2019-02-13 13:46:36.4636</responseTime>
+        <responseMsgID/>
+        <successYN/>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <anounceDt>2017-12-19</anounceDt>
+                <anounceNo>15260</anounceNo>
+                <lawTitle>경륜·경정법</lawTitle>
+            </item>
+        </items>
+        <totalCount>1</totalCount>
+        <pageNo>1</pageNo>
+        <numOfRows>10</numOfRows>
+    </body>
+</response>

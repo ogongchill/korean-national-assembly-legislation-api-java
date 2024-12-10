@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <billId>PRC_O1E5U1W1E3V0F1B3T0G2F0L5M3P7O1</billId>
+                <billName>대한민국 정부와 중화인민공화국 정부 간의 자유무역협정(FTA) 보완 촉구 결의안</billName>
+                <billNo>1917961</billNo>
+                <committeeName>외교통일위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-11-30</procDt>
+                <proposeDt>2015-11-30</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_I1U5I1B1Y2R5V1H7H0B3H1K3G7L7A5</billId>
+                <billName>프랑스 파리 등에 대한 테러공격 규탄 결의안</billName>
+                <billNo>1917904</billNo>
+                <committeeName>외교통일위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-11-30</procDt>
+                <proposeDt>2015-11-25</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_Q1C5D0F9A0S1P0P9T3R8U1A7R4P3Q2</billId>
+                <billName>정치개혁 특별위원회 구성결의안</billName>
+                <billNo>1916678</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-09-01</procDt>
+                <proposeDt>2015-09-01</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_I1A5O0Y8U1Q2C1N5P1F3H2Z5Y6V4U3</billId>
+                <billName>북한군의 비무장지대(DMZ) 지뢰도발 행위 규탄 결의안</billName>
+                <billNo>1916411</billNo>
+                <committeeName>국방위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-13</procDt>
+                <proposeDt>2015-08-12</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_S1T5E0O8U1M0J1I4M4W5W1L0O6Q2X9</billId>
+                <billName>동북아역사왜곡대책 특별위원회 구성결의안</billName>
+                <billNo>1916378</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-08-11</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_N1T5R0M8B1J0L1J4X5Q3J3J0L2U5U5</billId>
+                <billName>평창동계올림픽 및 국제경기대회지원 특별위원회 구성결의안</billName>
+                <billNo>1916377</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-08-11</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_T1X5F0U8T1D0H1M4R5Y8P5O2X1P2U6</billId>
+                <billName>서민주거복지 특별위원회 구성결의안</billName>
+                <billNo>1916376</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-08-11</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_R1S5Z0K8Q1A1Q1W0A1I7I0D0S2X5E0</billId>
+                <billName>국민안전을 위한 정부의 의지 제고와 적극적 안전정책 추진 촉구 결의안</billName>
+                <billNo>1916360</billNo>
+                <committeeName>국민안전혁신 특별위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-08-11</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_F1M5I0N7U2C8A1K6Z5W3M4O2I0I1R8</billId>
+                <billName>국가 감염병 관리체계 개선 촉구 결의안</billName>
+                <billNo>1916295</billNo>
+                <committeeName>중동호흡기증후군 대책 특별위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-07-31</proposeDt>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_I1L5D0F5G2N2O1F8Q1I4E0G5Q3R5G6</billId>
+                <billName>죽미령 유엔초전 미군추모 평화공원 조성 촉구 결의안</billName>
+                <billNo>1915256</billNo>
+                <committeeName>정무위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-08-11</procDt>
+                <proposeDt>2015-05-22</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>11</totalCount>
+    </body>
+</response>
