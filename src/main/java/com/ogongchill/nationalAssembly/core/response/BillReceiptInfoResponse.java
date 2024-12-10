@@ -19,4 +19,15 @@ public class BillReceiptInfoResponse {
     public SingleItemBody<BillReceiptInfoItem> getBody() {
         return body;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("header.code: ").append(header.getCode()).append("\n")
+            .append("header.message: ").append(header.getMessage()).append("\n");
+        if (body != null) {
+            builder.append("body: ").append(body.getItem().toString()).append("\n");
+        }
+        return builder.toString();
+    }
 }
