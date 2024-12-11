@@ -41,8 +41,8 @@ class NationalAssemblyLegislationServiceTest {
 			.proposerCode(ProposerCode.F01)
 			.endProposeDate("2024-11-25")
 			.startProposeDate("2024-11-25")
-			.startOrd(22)
-			.endOrd(22)
+			.startOrdinal(22)
+			.endOrdinal(22)
 			.numOfRows(100)
 			.build();
 		BillInfoListResponse response = api.getBillInfoList(request);
@@ -113,7 +113,7 @@ class NationalAssemblyLegislationServiceTest {
 		assertNotNull(response);
 	}
 
-	@DisplayName("의안 접수 정보 조회 - 응답 확인 필요")
+	@DisplayName("의안 접수 정보 조회")
 	@Test
 	void getBillReceiptInfo() {
 		BillReceiptInfoRequest request = new BillReceiptInfoRequest("PRC_X2X4V1W1V0V6D2D0C1A4B2Z3A6I3I7");
@@ -122,11 +122,7 @@ class NationalAssemblyLegislationServiceTest {
 		assertNotNull(response);
 	}
 
-	/**
-	 * XmlParserTest 에서는 items.item 까지 파싱이 되는데, 여기서는 안됨
-	 * @see com.ogongchill.nationalAssembly.core.api.util.XmlParserTest
-	 */
-	@DisplayName("의안/청원 접수정보 국회의원 목록 조회 - 응답 확인 필요")
+	@DisplayName("의안/청원 접수정보 국회의원 목록 조회")
 	@Test
 	void getBillPetitionMemberList() {
 		BillPetitionMemberListRequest request = BillPetitionMemberListRequest.builder()
