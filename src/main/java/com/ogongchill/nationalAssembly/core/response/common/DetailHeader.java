@@ -2,7 +2,7 @@ package com.ogongchill.nationalAssembly.core.response.common;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-public class BillReceiptInfoHeader extends Header {
+public class DetailHeader extends Header {
     @JacksonXmlProperty(localName = "successYN")
     private String successYN;
 
