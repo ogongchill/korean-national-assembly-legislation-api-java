@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.RecentMoorListItem;
@@ -35,32 +36,36 @@ public class RecentMoorListRequest {
      * <code>B13</code> 의원자격심사 <code>B14</code> 윤리심사<br>
      * <code>B15</code> 기타안<code>B16</code> 기타<br>
      */
-    private String bill_kind_cd;
+    @JsonProperty(value = "bill_kind_cd")
+    private String billKindCd;
 
     /**
      * <p>소관위원회</p>
      * 소관위원회code는 소관위원회 정보 조회API에서
      * <code>gbn=C06</code> 검색 후 <code>committeeCode</code>참조
      */
-    private String curr_committee;
+    @JsonProperty(value = "curr_committee")
+    private String currCommittee;
 
     /**
      * 의안명
      */
-    private String bill_name;
+    @JsonProperty(value = "bill_name")
+    private String billName;
 
     /**
      * 대수
      */
-    private Integer start_age_cd;
+    @JsonProperty(value = "start_age_cd")
+    private Integer startAgeCd;
 
     private RecentMoorListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.bill_kind_cd = builder.bill_kind_cd;
-        this.curr_committee = builder.curr_committee;
-        this.bill_name = builder.bill_name;
-        this.start_age_cd = builder.start_age_cd;
+        this.billKindCd = builder.billKindCd;
+        this.currCommittee = builder.currCommittee;
+        this.billName = builder.billName;
+        this.startAgeCd = builder.startAgeCd;
     }
 
     public static Builder builder() {
@@ -70,10 +75,10 @@ public class RecentMoorListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private String bill_kind_cd;
-        private String curr_committee;
-        private String bill_name;
-        private Integer start_age_cd;
+        private String billKindCd;
+        private String currCommittee;
+        private String billName;
+        private Integer startAgeCd;
 
         public Builder numOfRows(Integer numOfRows) {
             this.numOfRows = numOfRows;
@@ -86,22 +91,22 @@ public class RecentMoorListRequest {
         }
 
         public Builder billKindCd(BillCode billCode) {
-            this.bill_kind_cd = billCode.name();
+            this.billKindCd = billCode.name();
             return this;
         }
 
-        public Builder currCommittee(String curr_committee) {
-            this.curr_committee = curr_committee;
+        public Builder currCommittee(String currCommittee) {
+            this.currCommittee = currCommittee;
             return this;
         }
 
-        public Builder billName(String bill_name) {
-            this.bill_name = bill_name;
+        public Builder billName(String billName) {
+            this.billName = billName;
             return this;
         }
 
-        public Builder startAgeCd(Integer start_age_cd) {
-            this.start_age_cd = start_age_cd;
+        public Builder startAgeCd(Integer startAgeCd) {
+            this.startAgeCd = startAgeCd;
             return this;
         }
 
@@ -119,18 +124,18 @@ public class RecentMoorListRequest {
     }
 
     public String getBillKindCd() {
-        return bill_kind_cd;
+        return billKindCd;
     }
 
     public String getCurrCommittee() {
-        return curr_committee;
+        return currCommittee;
     }
 
     public String getBillName() {
-        return bill_name;
+        return billName;
     }
 
     public Integer getStartAgeCd() {
-        return start_age_cd;
+        return startAgeCd;
     }
 }

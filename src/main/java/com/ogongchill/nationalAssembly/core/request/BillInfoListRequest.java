@@ -1,9 +1,12 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
+import com.ogongchill.nationalAssembly.service.code.CommitteeResultCode;
+import com.ogongchill.nationalAssembly.service.code.PlenarySessionResultCode;
 import com.ogongchill.nationalAssembly.service.code.ProposerCode;
 
 /**
@@ -30,36 +33,42 @@ public class BillInfoListRequest {
      * 1인발의 <code>G02</code><br>
      * 공동발의 <code>G03</code><br>
      */
-    private String mem_name_check;
+    @JsonProperty(value = "mem_name_check")
+    private String memNameCheck;
 
     /**
      * 발의자
      */
-    private String mem_name;
+    @JsonProperty(value = "mem_name")
+    private String memName;
 
     /**
      * 발의자 한자
      * 발의자 한자(동명이인 구분)는 국회의원 현황조회 API의 hjNm참조
      */
-    private String hj_name;
+    @JsonProperty(value = "hj_name")
+    private String hanjaName;
 
     /**
      * <p>제안대수</p>
      * 22대 국회의원이 제안안 의안을 조회하려면 <code>22</code>
      */
-    private Integer ord;
+    @JsonProperty(value = "ord")
+    private Integer ordinal;
 
     /**
      * 시작 대수
      */
-    private Integer start_ord;
+    @JsonProperty(value = "start_ord")
+    private Integer startOrdinal;
 
     /**
      * <p>마지막 대수</p>
      * 18대 ~ 22대 국회에서 제안된 의안목록 조회시<br>
      * <code>start_ord = 18</code>; <code>end_ord = 22</code>
      */
-    private Integer end_ord;
+    @JsonProperty(value = "end_ord")
+    private Integer endOrdinal;
 
     /**
      * <p>본회의 처리 회기 구분</p>
@@ -75,55 +84,65 @@ public class BillInfoListRequest {
      * </p>
      * 각 파라미터들 중복 사용 불가
      */
-    private Integer process_num;
+    @JsonProperty(value = "process_num")
+    private Integer processNum;
 
     /**
      * <p>시작본회의처리회기</p>
      * 회기정보API에서 sessionCd참조
      */
-    private Integer start_process_num;
+    @JsonProperty(value = "start_process_num")
+    private Integer startProcessNum;
 
     /**
      * <p>마지막본회의처리회기</p>
      * 회기정보API에서 sessionCd참조
      */
-    private Integer end_process_num;
+    @JsonProperty(value = "end_process_num")
+    private Integer endProcessNum;
 
     /**
      * 제안회기구분
      */
-    private Integer propose_num;
+    @JsonProperty(value = "propose_num")
+    private Integer proposeNum;
 
     /**
      * <p>시작제안회기</p>
      * 회기정보API에서 sessionCd참조
      */
-    private Integer start_propose_num;
+    @JsonProperty(value = "start_propose_num")
+    private Integer startProposeNum;
 
     /**
      * 마지막제안회기
      */
-    private Integer end_propose_num;
+    @JsonProperty(value = "end_propose_num")
+    private Integer endProposeNum;
 
     /**
      * 시작제안일자
      */
-    private String start_propose_date;
+    @JsonProperty(value = "start_propose_date")
+    private String startProposeDate;
 
     /**
      * 마지막제안일자
      */
-    private String end_propose_date;
+    @JsonProperty(value = "end_propose_date")
+    private String endProposeDate;
 
     /**
      * 시작회부일자
      */
-    private String start_committee_dt;
+    @JsonProperty(value = "start_committee_dt")
+    private String startCommitteeDt;
 
     /**
      * 마지막회부일자
      */
-    private String end_committee_dt;
+    @JsonProperty(value = "end_committee_dt")
+    private String endCommitteeDt;
 
     /**
      * <p>의안종류</p>
@@ -136,14 +155,16 @@ public class BillInfoListRequest {
      * <code>B13</code> 의원자격심사 <code>B14</code> 윤리심사<br>
      * <code>B15</code> 기타안<code>B16</code> 기타<br>
      */
-    private String bill_kind_cd;
+    @JsonProperty(value = "bill_kind_cd")
+    private String billKindCode;
 
     /**
      * <p>소관위원회</p>
      * 소관위원회code는 소관위원회 정보 조회API에서
      * <code>gbn=C06</code> 검색 후 <code>committeeCode</code>참조
      */
-    private String curr_committee;
+    @JsonProperty(value = "curr_committee")
+    private String currentCommittee;
 
     /**
      * <p>제안종류</p>
@@ -162,7 +183,8 @@ public class BillInfoListRequest {
      * <code>D03</code>폐기<br>
      * <code>D04</code>계류<br>
      */
-    private String p_proc_result_cd;
+    @JsonProperty(value = "p_proc_result_cd")
+    private String pProcResultCode;
 
     /**
      * <p>본회의처리결과</p>
@@ -174,12 +196,14 @@ public class BillInfoListRequest {
      * <code>E06</code>철회<br>
      * <code>E07</code>계류<br>
      */
-    private String b_proc_result_cd;
+    @JsonProperty(value = "b_proc_result_cd")
+    private String bProcResultCode;
 
     /**
      * 의안명
      */
-    private String bill_name;
+    @JsonProperty(value = "bill_name")
+    private String billName;
 
     /**<p>구분</p>
      * <p>
@@ -211,7 +235,8 @@ public class BillInfoListRequest {
      * <code>true</code>
      * <code>false</code>
      */
-    private String amendmentyn;
+    @JsonProperty(value = "amendmentyn")
+    private String amendmentYesOrNo;
 
     /**
      * <p>비용추계서 유무</p>
@@ -223,27 +248,27 @@ public class BillInfoListRequest {
     private BillInfoListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.mem_name_check = builder.mem_name_check;
-        this.mem_name = builder.mem_name;
-        this.hj_name = builder.hj_name;
-        this.ord = builder.ord;
-        this.start_ord = builder.start_ord;
-        this.end_ord = builder.end_ord;
-        this.start_propose_num = builder.start_propose_num;
-        this.end_propose_num = builder.end_propose_num;
-        this.propose_num = builder.propose_num;
-        this.start_propose_date = builder.start_propose_date;
-        this.end_propose_date = builder.end_propose_date;
-        this.start_committee_dt = builder.start_committee_dt;
-        this.end_committee_dt = builder.end_committee_dt;
-        this.bill_kind_cd = builder.bill_kind_cd;
-        this.curr_committee = builder.curr_committee;
+        this.memNameCheck = builder.memNameCheck;
+        this.memName = builder.memName;
+        this.hanjaName = builder.hjName;
+        this.ordinal = builder.ordinal;
+        this.startOrdinal = builder.startOrdinal;
+        this.endOrdinal = builder.endOrdinal;
+        this.startProposeNum = builder.startProposeNum;
+        this.endProposeNum = builder.endProposeNum;
+        this.proposeNum = builder.proposeNum;
+        this.startProposeDate = builder.startProposeDate;
+        this.endProposeDate = builder.endProposeDate;
+        this.startCommitteeDt = builder.startCommitteeDt;
+        this.endCommitteeDt = builder.endCommitteeDt;
+        this.billKindCode = builder.billKindCd;
+        this.currentCommittee = builder.currCommittee;
         this.proposerCode = builder.proposerCode;
-        this.p_proc_result_cd = builder.p_proc_result_cd;
-        this.b_proc_result_cd = builder.b_proc_result_cd;
-        this.bill_name = builder.bill_name;
+        this.pProcResultCode = builder.pProcResultCd;
+        this.bProcResultCode = builder.bProcResultCd;
+        this.billName = builder.billName;
         this.gbn = builder.gbn;
-        this.amendmentyn = builder.amendmentyn;
+        this.amendmentYesOrNo = builder.amendmentYesOrNo;
         this.budget = builder.budget;
     }
 
@@ -254,30 +279,30 @@ public class BillInfoListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private String mem_name_check;
-        private String mem_name;
-        private String hj_name;
-        private Integer ord;
-        private Integer start_ord;
-        private Integer end_ord;
-        private Integer process_num;
-        private Integer start_process_num;
-        private Integer end_process_num;
-        private Integer propose_num;
-        private Integer start_propose_num;
-        private Integer end_propose_num;
-        private String start_propose_date;
-        private String end_propose_date;
-        private String start_committee_dt;
-        private String end_committee_dt;
-        private String bill_kind_cd;
-        private String curr_committee;
+        private String memNameCheck;
+        private String memName;
+        private String hjName;
+        private Integer ordinal;
+        private Integer startOrdinal;
+        private Integer endOrdinal;
+        private Integer processNum;
+        private Integer startProcessNum;
+        private Integer endProcessNum;
+        private Integer proposeNum;
+        private Integer startProposeNum;
+        private Integer endProposeNum;
+        private String startProposeDate;
+        private String endProposeDate;
+        private String startCommitteeDt;
+        private String endCommitteeDt;
+        private String billKindCd;
+        private String currCommittee;
         private String proposerCode;
-        private String p_proc_result_cd;
-        private String b_proc_result_cd;
-        private String bill_name;
+        private String pProcResultCd;
+        private String bProcResultCd;
+        private String billName;
         private String gbn;
-        private String amendmentyn;
+        private String amendmentYesOrNo;
         private String budget;
 
         public Builder numOfRows(Integer numOfRows) {
@@ -290,93 +315,93 @@ public class BillInfoListRequest {
             return this;
         }
 
-        public Builder memNameCheck(String mem_name_check) {
-            this.mem_name_check = mem_name_check;
+        public Builder memNameCheck(String memNameCheck) {
+            this.memNameCheck = memNameCheck;
             return this;
         }
 
-        public Builder memName(String mem_name) {
-            this.mem_name = mem_name;
+        public Builder memName(String memName) {
+            this.memName = memName;
             return this;
         }
 
-        public Builder hjName(String hj_name) {
-            this.hj_name = hj_name;
+        public Builder hjName(String hjName) {
+            this.hjName = hjName;
             return this;
         }
 
-        public Builder ord(Integer ord) {
-            this.ord = ord;
+        public Builder ordinal(Integer ordinal) {
+            this.ordinal = ordinal;
             return this;
         }
 
-        public Builder startOrd(Integer start_ord) {
-            this.start_ord = start_ord;
+        public Builder startOrdinal(Integer startOrdinal) {
+            this.startOrdinal = startOrdinal;
             return this;
         }
 
-        public Builder endOrd(Integer end_ord) {
-            this.end_ord = end_ord;
+        public Builder endOrdinal(Integer endOrdinal) {
+            this.endOrdinal = endOrdinal;
             return this;
         }
 
-        public Builder processNum(Integer process_num) {
-            this.process_num = process_num;
+        public Builder processNum(Integer processNum) {
+            this.processNum = processNum;
             return this;
         }
 
-        public Builder startProcessNum(Integer start_process_num) {
-            this.start_process_num = start_process_num;
+        public Builder startProcessNum(Integer startProcessNum) {
+            this.startProcessNum = startProcessNum;
             return this;
         }
 
-        public Builder endProcessNum(Integer end_process_num) {
-            this.end_process_num = end_process_num;
+        public Builder endProcessNum(Integer endProcessNum) {
+            this.endProcessNum = endProcessNum;
             return this;
         }
 
-        public Builder proposeNum(Integer propose_num) {
-            this.propose_num = propose_num;
+        public Builder proposeNum(Integer proposeNum) {
+            this.proposeNum = proposeNum;
             return this;
         }
 
-        public Builder startProposeNum(Integer start_propose_num) {
-            this.start_propose_num = start_propose_num;
+        public Builder startProposeNum(Integer startProposeNum) {
+            this.startProposeNum = startProposeNum;
             return this;
         }
 
-        public Builder endProposeNum(Integer end_propose_num) {
-            this.end_propose_num = end_propose_num;
+        public Builder endProposeNum(Integer endProposeNum) {
+            this.endProposeNum = endProposeNum;
             return this;
         }
 
-        public Builder startProposeDate(String start_propose_date) {
-            this.start_propose_date = start_propose_date;
+        public Builder startProposeDate(String startProposeDate) {
+            this.startProposeDate = startProposeDate;
             return this;
         }
 
-        public Builder endProposeDate(String end_propose_date) {
-            this.end_propose_date = end_propose_date;
+        public Builder endProposeDate(String endProposeDate) {
+            this.endProposeDate = endProposeDate;
             return this;
         }
 
-        public Builder startCommitteeDt(String start_committee_dt) {
-            this.start_committee_dt = start_committee_dt;
+        public Builder startCommitteeDt(String startCommitteeDt) {
+            this.startCommitteeDt = startCommitteeDt;
             return this;
         }
 
-        public Builder endCommitteeDt(String end_committee_dt) {
-            this.end_committee_dt = end_committee_dt;
+        public Builder endCommitteeDt(String endCommitteeDt) {
+            this.endCommitteeDt = endCommitteeDt;
             return this;
         }
 
-        public Builder billKindCd(String bill_kind_cd) {
-            this.bill_kind_cd = bill_kind_cd;
+        public Builder billKindCd(String billKindCd) {
+            this.billKindCd = billKindCd;
             return this;
         }
 
-        public Builder currCommittee(String curr_committee) {
-            this.curr_committee = curr_committee;
+        public Builder currCommittee(String currCommittee) {
+            this.currCommittee = currCommittee;
             return this;
         }
 
@@ -385,18 +410,18 @@ public class BillInfoListRequest {
             return this;
         }
 
-        public Builder pProcResultCd(String p_proc_result_cd) {
-            this.p_proc_result_cd = p_proc_result_cd;
+        public Builder pProcResultCd(CommitteeResultCode pProcResultCd) {
+            this.pProcResultCd = pProcResultCd.name();
             return this;
         }
 
-        public Builder bProcResultCd(String b_proc_result_cd) {
-            this.b_proc_result_cd = b_proc_result_cd;
+        public Builder bProcResultCd(PlenarySessionResultCode bProcResultCd) {
+            this.bProcResultCd = bProcResultCd.name();
             return this;
         }
 
-        public Builder billName(String bill_name) {
-            this.bill_name = bill_name;
+        public Builder billName(String billName) {
+            this.billName = billName;
             return this;
         }
 
@@ -405,8 +430,8 @@ public class BillInfoListRequest {
             return this;
         }
 
-        public Builder amendmentyn(String amendmentyn) {
-            this.amendmentyn = amendmentyn;
+        public Builder amendmentYesOrNo(String amendmentyn) {
+            this.amendmentYesOrNo = amendmentyn;
             return this;
         }
 
@@ -429,75 +454,75 @@ public class BillInfoListRequest {
     }
 
     public String getMemNameCheck() {
-        return mem_name_check;
+        return memNameCheck;
     }
 
     public String getMemName() {
-        return mem_name;
+        return memName;
     }
 
-    public String getHjName() {
-        return hj_name;
+    public String getHanjaName() {
+        return hanjaName;
     }
 
-    public Integer getOrd() {
-        return ord;
+    public Integer getOrdinal() {
+        return ordinal;
     }
 
-    public Integer getStartOrd() {
-        return start_ord;
+    public Integer getStartOrdinal() {
+        return startOrdinal;
     }
 
-    public Integer getEndOrd() {
-        return end_ord;
+    public Integer getEndOrdinal() {
+        return endOrdinal;
     }
 
     public Integer getProcessNum() {
-        return process_num;
+        return processNum;
     }
 
     public Integer getStartProcessNum() {
-        return start_process_num;
+        return startProcessNum;
     }
 
     public Integer getEndProcessNum() {
-        return end_process_num;
+        return endProcessNum;
     }
 
     public Integer getProposeNum() {
-        return propose_num;
+        return proposeNum;
     }
 
     public Integer getStartProposeNum() {
-        return start_propose_num;
+        return startProposeNum;
     }
 
     public Integer getEndProposeNum() {
-        return end_propose_num;
+        return endProposeNum;
     }
 
     public String getStartProposeDate() {
-        return start_propose_date;
+        return startProposeDate;
     }
 
     public String getEndProposeDate() {
-        return end_propose_date;
+        return endProposeDate;
     }
 
     public String getStartCommitteeDt() {
-        return start_committee_dt;
+        return startCommitteeDt;
     }
 
     public String getEndCommitteeDt() {
-        return end_committee_dt;
+        return endCommitteeDt;
     }
 
-    public String getBillKindCd() {
-        return bill_kind_cd;
+    public String getBillKindCode() {
+        return billKindCode;
     }
 
     public String getCurrCommittee() {
-        return curr_committee;
+        return currentCommittee;
     }
 
     public String getProposerCode() {
@@ -505,23 +530,23 @@ public class BillInfoListRequest {
     }
 
     public String pProcResultCd() {
-        return p_proc_result_cd;
+        return pProcResultCode;
     }
 
     public String bProcResultCd() {
-        return b_proc_result_cd;
+        return bProcResultCode;
     }
 
     public String getBillName() {
-        return bill_name;
+        return billName;
     }
 
     public String getGbn() {
         return gbn;
     }
 
-    public String getAmendmentyn() {
-        return amendmentyn;
+    public String getAmendmentYesOrNo() {
+        return amendmentYesOrNo;
     }
 
     public String getBudget() {

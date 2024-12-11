@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
 import com.ogongchill.nationalAssembly.core.response.item.SessionRequestListItem;
@@ -27,7 +28,8 @@ public class SessionRequestListRequest {
     /**
      * 대수
      */
-    private Integer start_age_cd;
+    @JsonProperty(value = "start_age_cd")
+    private Integer startAgeCode;
 
     /**
      * <p>의안종류</p>
@@ -40,27 +42,30 @@ public class SessionRequestListRequest {
      * <code>B13</code> 의원자격심사 <code>B14</code> 윤리심사<br>
      * <code>B15</code> 기타안<code>B16</code> 기타<br>
      */
-    private String bill_kind_cd;
+    @JsonProperty(value = "bill_kind_cd")
+    private String billKindCode;
 
     /**
      * <p>소관위원회</p>
      * 소관위원회code는 소관위원회 정보 조회API에서
      * <code>gbn=C06</code> 검색 후 <code>committeeCode</code>참조
      */
-    private String curr_committee;
+    @JsonProperty(value = "curr_committee")
+    private String currCommittee;
 
     /**
      * 의안명
      */
-    private String bll_name;
+    @JsonProperty(value = "bill_name")
+    private String billName;
 
     private SessionRequestListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.start_age_cd = builder.start_age_cd;
-        this.bill_kind_cd = builder.bill_kind_cd;
-        this.curr_committee = builder.curr_committee;
-        this.bll_name = builder.bll_name;
+        this.startAgeCode = builder.startAgeCode;
+        this.billKindCode = builder.billKindCode;
+        this.currCommittee = builder.currCommittee;
+        this.billName = builder.billName;
     }
 
     public static Builder builder() {
@@ -70,10 +75,10 @@ public class SessionRequestListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private Integer start_age_cd;
-        private String bill_kind_cd;
-        private String curr_committee;
-        private String bll_name;
+        private Integer startAgeCode;
+        private String billKindCode;
+        private String currCommittee;
+        private String billName;
 
         public Builder numOfRows(Integer numOfRows) {
             this.numOfRows = numOfRows;
@@ -85,23 +90,23 @@ public class SessionRequestListRequest {
             return this;
         }
 
-        public Builder startAgeCd(Integer start_age_cd) {
-            this.start_age_cd = start_age_cd;
+        public Builder startAgeCd(Integer startAgeCd) {
+            this.startAgeCode = startAgeCd;
             return this;
         }
 
         public Builder billKindCd(BillCode billCode) {
-            this.bill_kind_cd = billCode.name();
+            this.billKindCode = billCode.name();
             return this;
         }
 
-        public Builder currCommittee(String curr_committee) {
-            this.curr_committee = curr_committee;
+        public Builder currCommittee(String currCommittee) {
+            this.currCommittee = currCommittee;
             return this;
         }
 
-        public Builder bllName(String bll_name) {
-            this.bll_name = bll_name;
+        public Builder billName(String billName) {
+            this.billName = billName;
             return this;
         }
 
@@ -118,19 +123,19 @@ public class SessionRequestListRequest {
         return pageNo;
     }
 
-    public Integer getStart_age_cd() {
-        return start_age_cd;
+    public Integer getStartAgeCode() {
+        return startAgeCode;
     }
 
-    public String getBill_kind_cd() {
-        return bill_kind_cd;
+    public String getBillKindCode() {
+        return billKindCode;
     }
 
-    public String getCurr_committee() {
-        return curr_committee;
+    public String getCurrCommittee() {
+        return currCommittee;
     }
 
-    public String getBll_name() {
-        return bll_name;
+    public String getBillName() {
+        return billName;
     }
 }

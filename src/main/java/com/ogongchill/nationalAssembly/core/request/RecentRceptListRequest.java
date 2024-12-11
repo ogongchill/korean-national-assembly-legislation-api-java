@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.RecentRceptListItem;
@@ -13,25 +14,18 @@ import com.ogongchill.nationalAssembly.core.response.item.RecentRceptListItem;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RecentRceptListRequest {
-    /**
-     * 한 페이지 결과 수, 기본값은 10
-     */
-    private Integer numOfRows;
 
-    /**
-     * 페이지 번호
-     */
-    private Integer pageNo;
+    private Integer numOfRows; // 한 페이지 결과 수, 기본값은 10
 
-    /**
-     * 의안명
-     */
-    private String bill_name;
+    private Integer pageNo; // 페이지 번호
+
+    @JsonProperty(value = "bill_name")
+    private String billName; // 의안명
 
     private RecentRceptListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.bill_name = builder.bill_name;
+        this.billName = builder.billName;
     }
 
     public static Builder builder() {
@@ -41,7 +35,7 @@ public class RecentRceptListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private String bill_name;
+        private String billName;
 
         public Builder numOfRows(Integer numOfRows) {
             this.numOfRows = numOfRows;
@@ -53,8 +47,8 @@ public class RecentRceptListRequest {
             return this;
         }
 
-        public Builder billName(String bill_name) {
-            this.bill_name = bill_name;
+        public Builder billName(String billName) {
+            this.billName = billName;
             return this;
         }
 
@@ -71,7 +65,7 @@ public class RecentRceptListRequest {
         return pageNo;
     }
 
-    public String getBill_name() {
-        return bill_name;
+    public String getBillName() {
+        return billName;
     }
 }
