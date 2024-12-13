@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.BillReceiptInfoResponse;
 import com.ogongchill.nationalAssembly.core.response.item.billReceipt.BillReceiptInfoItem;
@@ -13,16 +14,36 @@ import com.ogongchill.nationalAssembly.core.response.item.billReceipt.BillReceip
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BillReceiptInfoRequest {
-    /**
-     * <p>의안 ID</p>
-     */
-    private String bill_id;
 
-    public BillReceiptInfoRequest(String bill_id) {
-        this.bill_id = bill_id;
+    @JsonProperty(value = "bill_id")
+    private String billId; // 의안 ID
+
+    public BillReceiptInfoRequest(String billId) {
+        this.billId = billId;
+    }
+
+    public BillReceiptInfoRequest(Builder builder) {
+        this.billId = builder.billId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String billId;
+
+        public Builder billId(String billId) {
+            this.billId = billId;
+            return this;
+        }
+
+        public BillReceiptInfoRequest build() {
+            return new BillReceiptInfoRequest(billId);
+        }
     }
 
     public String getBillId() {
-        return bill_id;
+        return billId;
     }
 }

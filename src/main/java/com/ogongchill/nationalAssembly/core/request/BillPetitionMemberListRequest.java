@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
 import com.ogongchill.nationalAssembly.core.response.item.BillPetitionMemberListItem;
@@ -19,7 +20,8 @@ public class BillPetitionMemberListRequest {
      * 각 <code>billId</code>및 <code>proposerId</code>에 맞는 파라미터가 아닐시 상이한 결과 도출됨
      * @see BillInfoListItem
      */
-    private String bill_id;
+    @JsonProperty(value = "bill_id")
+    private String billId;
 
     /**
      * <p>구분자(의안,청원)</p>
@@ -38,7 +40,7 @@ public class BillPetitionMemberListRequest {
     private String gbn2;
 
     private BillPetitionMemberListRequest(Builder builder) {
-        this.bill_id = builder.bill_id;
+        this.billId = builder.billId;
         this.gbn1 = builder.gbn1;
         this.gbn2 = builder.gbn2;
     }
@@ -48,15 +50,15 @@ public class BillPetitionMemberListRequest {
     }
 
     public static class Builder {
-        private String bill_id;
+        private String billId;
         private String gbn1;
         private String gbn2;
 
         private Builder() {
         }
 
-        public Builder bill_id(String bill_id) {
-            this.bill_id = bill_id;
+        public Builder billId(String billId) {
+            this.billId = billId;
             return this;
         }
 
@@ -76,7 +78,7 @@ public class BillPetitionMemberListRequest {
     }
 
     public String getBillId() {
-        return bill_id;
+        return billId;
     }
 
     public String getGbn1() {

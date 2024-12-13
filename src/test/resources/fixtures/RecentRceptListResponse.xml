@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <billId>PRC_P1N5T1U1B3W0T1G0W3R8K0J6E9W9H3</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917939</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-11-30</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_P1U5T1Y1A1N7R1T6J3J1M5E9K0A8W2</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917782</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-11-17</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_H1T5H1V1N0K9P1Q6C5E5U2C3N4H6X1</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917653</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-11-09</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_E1R5N1E1L0F2J1R1L3D1T5L3L0X6B0</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917511</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-11-02</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_N1U5D1D0R3K0A1P0L3P7Q4Q2G3Y1H0</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917466</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-10-30</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_N1N5V1P0V2F6D1X0N5M5S2H6I7O5X9</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1917369</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-10-26</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_K1X5I0P9S2K3Y1Z7A2L3F2V1J6R5E0</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1916931</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-09-23</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_R1M5D0C9B1B5Y1Q6A3A1A4I8O2W8V1</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1916856</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-09-15</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_F1V5D0H8A2H1X1H3O4N4X1Y6A8M0T2</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1916511</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-08-21</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_C1Z5A0E8O1Z3Z1M7A3R6K1X3Q0S5J2</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1916429</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <proposeDt>2015-08-13</proposeDt>
+                <proposerKind>의원</proposerKind>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>19</totalCount>
+    </body>
+</response>

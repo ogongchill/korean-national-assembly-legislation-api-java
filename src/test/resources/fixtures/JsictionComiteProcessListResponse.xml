@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <billId>PRC_W1G5G0W5V2B8A1Q1Z0R3R1V1U3U6U0</billId>
+                <billName>국회법 일부개정법률안(대안)</billName>
+                <billNo>1915336</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2015-05-29</proposeDt>
+                <proposer>국회운영위원장</proposer>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_M1I4O0G6I2F0H1O7H3U6U4J2N2O0T7</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1910938</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2014-06-20</proposeDt>
+                <proposer>김영록의원 등 19인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2014-06-25</submitDt>
+            </item>
+            <item>
+                <billId>PRC_H1V3C1C0Q1V0O1B2D0P3Z1J6Z4A4F4</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1907232</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2013-10-10</proposeDt>
+                <proposer>윤영석의원 등 10인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2013-10-11</submitDt>
+            </item>
+            <item>
+                <billId>PRC_M1H3X0Q5F2W4L1A1U0F8Q3A0T1I2Z8</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1905096</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2013-05-24</proposeDt>
+                <proposer>민병두의원 등 12인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2013-05-27</submitDt>
+            </item>
+            <item>
+                <billId>PRC_F1F2I0B7T2W4C1F7T0T5Q0S7A9P5P7</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1900856</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2012-07-24</proposeDt>
+                <proposer>유성엽의원 등 14인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2012-07-25</submitDt>
+            </item>
+            <item>
+                <billId>PRC_A1N2M0K7Z0K2P1X4G4I8R3R0I7E1C0</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1900423</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2015-05-29</procDt>
+                <proposeDt>2012-07-02</proposeDt>
+                <proposer>이춘석의원 등 10인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2012-07-09</submitDt>
+            </item>
+            <item>
+                <billId>PRC_A1A4Y1X1U0R5T2Z1L1F4C2D3U3X8X3</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1912356</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2014-11-07</procDt>
+                <proposeDt>2014-11-07</proposeDt>
+                <proposer>국회운영위원장</proposer>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_E1P4L0U4Z1Z6T1R4B1B0F2T5T5A6S6</billId>
+                <billName>국회법 일부개정법률안(대안)</billName>
+                <billNo>1910329</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>원안가결</generalResult>
+                <procDt>2014-04-29</procDt>
+                <proposeDt>2014-04-28</proposeDt>
+                <proposer>국회운영위원장</proposer>
+                <proposerKind>위원장</proposerKind>
+            </item>
+            <item>
+                <billId>PRC_Y1R4B0P2R2C8I1H0L3H1Y5T9X7A2H4</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1909566</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2014-04-29</procDt>
+                <proposeDt>2014-02-28</proposeDt>
+                <proposer>심재철의원 등 10인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2014-03-03</submitDt>
+            </item>
+            <item>
+                <billId>PRC_L1A4Y0H2B2Q1M1J1A1G7E1P7A8H6Y5</billId>
+                <billName>국회법 일부개정법률안</billName>
+                <billNo>1909469</billNo>
+                <committeeName>국회운영위원회</committeeName>
+                <generalResult>대안반영폐기</generalResult>
+                <procDt>2014-04-29</procDt>
+                <proposeDt>2014-02-21</proposeDt>
+                <proposer>홍익표의원 등 10인</proposer>
+                <proposerKind>의원</proposerKind>
+                <submitDt>2014-02-24</submitDt>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>37</totalCount>
+    </body>
+</response>

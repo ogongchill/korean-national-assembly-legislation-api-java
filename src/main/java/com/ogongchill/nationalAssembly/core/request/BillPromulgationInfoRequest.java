@@ -1,6 +1,7 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 
 /**
@@ -9,16 +10,32 @@ import com.ogongchill.nationalAssembly.core.api.Operation;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BillPromulgationInfoRequest {
-    /**
-     * 의안 ID
-     */
-    private String bill_id;
 
-    public BillPromulgationInfoRequest(String bill_id) {
-        this.bill_id = bill_id;
+    @JsonProperty(value = "bill_id")
+    private String billId; // 의안 ID
+
+    public BillPromulgationInfoRequest(String billId) {
+        this.billId = billId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+        private String billId;
+
+        public Builder billId(String billId) {
+            this.billId = billId;
+            return this;
+        }
+
+        public BillPromulgationInfoRequest build() {
+            return new BillPromulgationInfoRequest(billId);
+        }
     }
 
     public String getBillId() {
-        return bill_id;
+        return billId;
     }
 }

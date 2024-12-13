@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <items>
+            <item>
+                <billId>PRC_O1R4A0O3X1K3K1O4S0E7A2E5O6G8Z0</billId>
+                <billName>기업구조조정 촉진법 일부개정법률안(강기정의원 등 13인)</billName>
+                <billNo>1909704</billNo>
+                <generalResult>원안가결</generalResult>
+                <passGubn>처리의안</passGubn>
+                <procDt>2014-09-30</procDt>
+                <procStageCd>공포</procStageCd>
+                <proposeDt>2014-03-13</proposeDt>
+                <proposerKind>의원</proposerKind>
+                <summary>제안이유 및 주요내용 현행법에 따르면 금융위원회는 채권금융기관이 부실징후기업에 대하여 관리절차의 개시를 신청할 수 있음을 통보하지 않는 등 현행법에 따른 의무이행을 하지
+                    아니하는 경우에는 업무의 정지를 명할 수 있음. 그런데 업무정지의 기간은 국민의 직업의 자유와 관련된 중요한 사항으로서 업무정지의 사유 못지않게 업무정지처분의 핵심적ㆍ본질적
+                    요소이므로 그 상한을 법률에 명확히 규정하여야 함. 이에 금융위원회가 채권금융기관에게 내리는 업무정지 기간의 상한을 “6개월 이내”로 명확히 규정함으로써 법률의 명확성과
+                    예측가능성을 확보하려는 것임(안 제26조제2항).
+                </summary>
+            </item>
+        </items>
+        <numOfRows>10</numOfRows>
+        <pageNo>1</pageNo>
+        <totalCount>1</totalCount>
+    </body>
+</response>

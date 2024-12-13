@@ -1,9 +1,11 @@
 package com.ogongchill.nationalAssembly.core.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.JsictionComiteProcessListItem;
+import com.ogongchill.nationalAssembly.service.code.BillCode;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getJsictionComiteProcessList</code>오퍼레이션의 요청 파라미터임
@@ -26,7 +28,8 @@ public class JsictionComiteProcessListRequest {
     /**
      * 대수
      */
-    private Integer start_age_cd;
+    @JsonProperty(value = "start_age_cd")
+    private Integer startAgeCd;
 
     /**
      * <p>의안종류</p>
@@ -39,21 +42,23 @@ public class JsictionComiteProcessListRequest {
      * <code>B13</code> 의원자격심사 <code>B14</code> 윤리심사<br>
      * <code>B15</code> 기타안<code>B16</code> 기타<br>
      */
-    private String bill_kind_cd;
+    @JsonProperty(value = "bill_kind_cd")
+    private String billKindCode;
 
     /**
      * <p>소관위원회</p>
      * 소관위원회code는 소관위원회 정보 조회API에서
      * <code>gbn=C06</code> 검색 후 <code>committeeCode</code>참조
      */
-    private String curr_committee;
+    @JsonProperty(value = "curr_committee")
+    private String currCommittee;
 
     private JsictionComiteProcessListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.start_age_cd = builder.start_age_cd;
-        this.bill_kind_cd = builder.bill_kind_cd;
-        this.curr_committee = builder.curr_committee;
+        this.startAgeCd = builder.startAgeCd;
+        this.billKindCode = builder.billKindCd;
+        this.currCommittee = builder.currCommittee;
     }
 
     public static Builder builder() {
@@ -63,9 +68,9 @@ public class JsictionComiteProcessListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private Integer start_age_cd;
-        private String bill_kind_cd;
-        private String curr_committee;
+        private Integer startAgeCd;
+        private String billKindCd;
+        private String currCommittee;
 
         public Builder numOfRows(Integer numOfRows) {
             this.numOfRows = numOfRows;
@@ -77,18 +82,18 @@ public class JsictionComiteProcessListRequest {
             return this;
         }
 
-        public Builder startAgeCd(Integer start_age_cd) {
-            this.start_age_cd = start_age_cd;
+        public Builder startAgeCd(Integer startAgeCd) {
+            this.startAgeCd = startAgeCd;
             return this;
         }
 
-        public Builder billKindCd(String bill_kind_cd) {
-            this.bill_kind_cd = bill_kind_cd;
+        public Builder billKindCd(BillCode billCode) {
+            this.billKindCd = billCode.name();
             return this;
         }
 
-        public Builder currCommittee(String curr_committee) {
-            this.curr_committee = curr_committee;
+        public Builder currCommittee(String currCommittee) {
+            this.currCommittee = currCommittee;
             return this;
         }
 
@@ -106,14 +111,14 @@ public class JsictionComiteProcessListRequest {
     }
 
     public Integer getStartAgeCd() {
-        return start_age_cd;
+        return startAgeCd;
     }
 
-    public String getBillKindCd() {
-        return bill_kind_cd;
+    public String getBillKindCode() {
+        return billKindCode;
     }
 
     public String getCurrCommittee() {
-        return curr_committee;
+        return currCommittee;
     }
 }
