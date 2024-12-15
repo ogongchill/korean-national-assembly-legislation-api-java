@@ -9,7 +9,8 @@ import com.ogongchill.nationalAssembly.core.request.BillInfoListRequest;
  * @see Operation
  */
 public record BillPetitionMemberListItem(
-    /**<p>구분1</p>
+    /**
+     * <p>구분1</p>
      * 의안 : <code>bill</code><br>
      * 청원 : <code>petition</code><br>
      */
@@ -27,7 +28,6 @@ public record BillPetitionMemberListItem(
      * <code>발의자</code>, <code>찬성자</code>, <code>철회자</code>로 응답
      */
     String gbnCd,
-
     String hjNm, // 한자명
     String memName, // 의원명
     String polyNm // 소속정당

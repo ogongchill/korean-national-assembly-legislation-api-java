@@ -22,7 +22,7 @@ import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListRe
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentPasageListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
-import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
+import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
 import com.ogongchill.nationalAssembly.service.code.BillCode;
 import com.ogongchill.nationalAssembly.service.code.ProposerCode;
 
@@ -108,7 +108,7 @@ class NationalAssemblyLegislationServiceTest {
 			.pageNo(1)
 			.numOfRows(100)
 			.build();
-		SessionRequestResponse response = api.getSessionRequestList(request);
+		SessionRequestListResponse response = api.getSessionRequestList(request);
 		System.out.println(response.toString());
 		assertNotNull(response);
 	}

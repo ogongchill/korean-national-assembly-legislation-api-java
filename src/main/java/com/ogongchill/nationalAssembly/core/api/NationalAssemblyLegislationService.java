@@ -19,7 +19,7 @@ import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListRe
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentPasageListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
-import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
+import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -75,10 +75,10 @@ public class NationalAssemblyLegislationService implements NationalAssemblyLegis
     }
 
     @Override
-    public SessionRequestResponse getSessionRequestList(SessionRequestListRequest request) {
+    public SessionRequestListResponse getSessionRequestList(SessionRequestListRequest request) {
         Request sessionRequestListRequest = UrlQueryParamConverter.createRequest(Operation.GET_SESSION_REQUEST_LIST, request);
         String responseBody = client.getResponseBodyString(sessionRequestListRequest);
-        return XmlParser.parse(responseBody, SessionRequestResponse.class);
+        return XmlParser.parse(responseBody, SessionRequestListResponse.class);
     }
 
     @Override

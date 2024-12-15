@@ -17,7 +17,7 @@ import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListRe
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentPasageListResponse;
 import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
-import com.ogongchill.nationalAssembly.core.response.SessionRequestResponse;
+import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
 
 public interface
 NationalAssemblyLegislationApi {
@@ -26,7 +26,7 @@ NationalAssemblyLegislationApi {
     RecentPasageListResponse getRecentPasageList(RecentPasageListRequest request);
     JsictionComiteProcessListResponse getJsictionComiteProcessList(JsictionComiteProcessListRequest request);
     RecentMoorListResponse getRecentMoorList(RecentMoorListRequest request);
-    SessionRequestResponse getSessionRequestList(SessionRequestListRequest request);
+    SessionRequestListResponse getSessionRequestList(SessionRequestListRequest request);
     BillReceiptInfoResponse getBillReceiptInfo(BillReceiptInfoRequest request);
     BillPetitionMemberListResponse getBillPetitionMemberList(BillPetitionMemberListRequest request);
     BillPromulgationInfoResponse getBillPromulgationInfo(BillPromulgationInfoRequest request);

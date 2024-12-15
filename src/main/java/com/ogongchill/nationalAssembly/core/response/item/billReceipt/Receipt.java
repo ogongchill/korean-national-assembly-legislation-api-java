@@ -22,6 +22,7 @@ public record Receipt(
     String cosPdfpName, // 비용추계서 PDF 문서명
     String costHwpUrl, // 비용추계서 HWP 파일 경로
     String costPdfUrl, // 비용추계서 PDF 파일 경로
+    String notcostHwpName, // 비용추계서 문서명
     String notcostPdfName, // 비용추계서 문서명
     String notcostHwpUrl, // 비용추계서 HWP 파일 경로
     String notcostPdfUrl, // 비용추계서 PDF 파일 경로
