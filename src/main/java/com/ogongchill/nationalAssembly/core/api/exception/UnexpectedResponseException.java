@@ -3,19 +3,19 @@ package com.ogongchill.nationalAssembly.core.api.exception;
 public class UnexpectedResponseException extends RuntimeException {
 
     private final String actual;
-    private final String expected;
+    private final Class<?> expectedClass;
 
-    public UnexpectedResponseException(Throwable cause, String actual, String expected) {
+    public <T> UnexpectedResponseException(Throwable cause, String actual, Class<T> expected) {
         super(cause);
         this.actual = actual;
-        this.expected = expected;
+        this.expectedClass = expected;
     }
 
     public String getActual() {
         return actual;
     }
 
-    public String getExpected() {
-        return expected;
+    public Class<?> getExpectedClass() {
+        return expectedClass;
     }
 }

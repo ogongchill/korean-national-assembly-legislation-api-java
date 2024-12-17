@@ -1,11 +1,12 @@
 package com.ogongchill.nationalAssembly.core.api.exception;
 
-public class NetworkException extends RuntimeException {
+public class NetworkException extends NationalAssemblyLegislationApiException {
 
-    private final int code;
+    public NetworkException(Throwable cause) {
+        super(cause);
+    }
 
-    public NetworkException(int code, String message) {
+    public NetworkException(String message) {
         super(message);
-        this.code = code;
     }
 }
