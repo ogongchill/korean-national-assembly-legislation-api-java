@@ -2,7 +2,7 @@ package com.ogongchill.nationalAssembly.core.api.exception;
 
 import com.ogongchill.nationalAssembly.core.response.error.ErrorResponse;
 
-public class ApiErrorException extends RuntimeException {
+public class ApiErrorException extends NationalAssemblyLegislationApiException {
 
     private final ErrorResponse errorResponse;
 

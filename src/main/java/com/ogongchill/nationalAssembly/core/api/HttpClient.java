@@ -29,6 +29,7 @@ public class HttpClient {
                 throw new NetworkException(response.code(), "response body is null");
             }
         } catch (IOException e) {
+            System.out.println(e.getMessage());
             throw new UnexpectedErrorException(e);
         }
         throw new UnexpectedErrorException("Unexpected error: Unreachable code reached");

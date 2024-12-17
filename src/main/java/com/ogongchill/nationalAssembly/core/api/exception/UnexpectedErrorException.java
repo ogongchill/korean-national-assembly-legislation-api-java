@@ -1,6 +1,6 @@
 package com.ogongchill.nationalAssembly.core.api.exception;
 
-public class UnexpectedErrorException extends RuntimeException {
+public class UnexpectedErrorException extends NationalAssemblyLegislationApiException {
 
     public UnexpectedErrorException(Throwable cause) {
         super(cause);

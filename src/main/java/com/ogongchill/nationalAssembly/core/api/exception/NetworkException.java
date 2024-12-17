@@ -1,6 +1,6 @@
 package com.ogongchill.nationalAssembly.core.api.exception;
 
-public class NetworkException extends RuntimeException {
+public class NetworkException extends NationalAssemblyLegislationApiException {
 
     private final int code;
 

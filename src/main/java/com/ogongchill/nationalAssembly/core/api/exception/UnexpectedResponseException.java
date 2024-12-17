@@ -1,6 +1,6 @@
 package com.ogongchill.nationalAssembly.core.api.exception;
 
-public class UnexpectedResponseException extends RuntimeException {
+public class UnexpectedResponseException extends NationalAssemblyLegislationApiException {
 
     private final String actual;
     private final String expected;
