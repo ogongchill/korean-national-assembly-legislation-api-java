@@ -4,12 +4,12 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class Header {
     @JacksonXmlProperty(localName = "resultCode")
-    private String code;
+    private Integer code;
 
     @JacksonXmlProperty(localName = "resultMsg")
     private String message;
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
