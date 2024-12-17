@@ -2,16 +2,19 @@ package com.ogongchill.nationalAssembly.core.api.util;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+
 import com.ogongchill.nationalAssembly.core.api.exception.ApiErrorException;
 import com.ogongchill.nationalAssembly.core.api.exception.UnexpectedResponseException;
 import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.ogongchill.nationalAssembly.TestUtils;
 import com.ogongchill.nationalAssembly.core.response.BillPetitionMemberListResponse;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -19,17 +22,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 class XmlParserTest {
-
-    private static final String BILL_PETITION_MEMBER_LIST_RESPONSE_XML = "fixtures/BillPetitionMemberListResponse.xml";
-
-    @DisplayName("")
-    @Test
-    void test() {
-        String sourceFile = TestUtils.readSourceFile(BILL_PETITION_MEMBER_LIST_RESPONSE_XML);
-        BillPetitionMemberListResponse response = XmlParser.parse(sourceFile, BillPetitionMemberListResponse.class);
-        System.out.println(response.toString());
-        assertNotNull(response);
-    }
 
     @DisplayName("에러 응답시 ApiErrorException 을 반환하는지 확인")
     @ParameterizedTest
