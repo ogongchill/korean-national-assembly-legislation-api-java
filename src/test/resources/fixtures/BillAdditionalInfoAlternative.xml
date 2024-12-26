@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <requestMsgID></requestMsgID>
+        <responseTime>2024-12-20 17:44:02.442</responseTime>
+        <responseMsgID></responseMsgID>
+        <successYN></successYN>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <billGbnCd/>
+        <bpmOthers/>
+        <commMemo/>
+        <exhaust>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_H2G4H0F7E1M8N1L7K5I4F1G2E3Q0P7</billLink>
+                <billName>양곡관리법 일부개정법률안(임미애의원 등 11인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_S2A4Z0A6Z1Y8F1E5D1C8D5L7J7I3G3</billLink>
+                <billName>양곡관리법 일부개정법률안(서삼석의원 등 19인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_L2L4K0K7J0J3R1P6Q0P2P3N6J0K8I7</billLink>
+                <billName>양곡관리법 일부개정법률안(신정훈의원 등 10인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_N2M4K0L7Z1A7Z0Z9X5W8W3E7F3D3E2</billLink>
+                <billName>양곡관리법 일부개정법률안(송옥주의원 등 14인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_T2B4C0A7B1Z6X1Y4G2H3F1F9E1C7D8</billLink>
+                <billName>양곡관리법 일부개정법률안(박수현의원 등 26인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_H2I4G0F7E2M2N1M4N5M2M2L0U8S6R5</billLink>
+                <billName>양곡관리법 일부개정법률안(정희용의원 등 12인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_M2U4U1S0N2L3K1J4R5Q6P0O3X0W5V4</billLink>
+                <billName>양곡관리법 일부개정법률안(윤준병의원 등 10인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_P2V4U0T5T3B0Y0X9T1V1B1A5Z5I2F0</billLink>
+                <billName>양곡관리법 일부개정법률안(이원택의원 등 11인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_C2W4V0E6B1K4H1G3O5N2K4T7R6P2M4</billLink>
+                <billName>양곡관리법 일부개정법률안(어기구의원 등 10인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_W2G4V0K5R3A0W1D3Q0N6X3S8E7Z1O8</billLink>
+                <billName>양곡관리법 일부개정법률안(윤준병의원 등 10인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_I2I4G0H6F0G7E1F3A4B4A2Y3Y6X9X7</billLink>
+                <billName>양곡관리법 일부개정법률안(황명선의원 등 15인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_V2T4U0C8A0B8Z1Z0Y3Z7H1H6F9G2E0</billLink>
+                <billName>양곡관리법 일부개정법률안(전종덕의원 등 12인발의)</billName>
+            </item>
+            <item>
+                <billLink>http://likms.assembly.go.kr/bill/jsp/BillDetail.jsp?bill_id=PRC_K2I4J0H8G1G2C1D1B3B9A3Y5Z1G1H6</billLink>
+                <billName>양곡관리법 일부개정법률안(박희승의원 등 12인발의)</billName>
+            </item>
+        </exhaust>
+    </body>
+</response>
