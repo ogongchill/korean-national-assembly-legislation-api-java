@@ -31,6 +31,7 @@ public class BillReceiptInfoRequest {
     }
 
     public static class Builder {
+
         private String billId;
 
         public Builder billId(String billId) {

@@ -3,11 +3,9 @@ package com.ogongchill.nationalAssembly.core.request;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
+import com.ogongchill.nationalAssembly.core.code.*;
 import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
-import com.ogongchill.nationalAssembly.service.code.CommitteeResultCode;
-import com.ogongchill.nationalAssembly.service.code.PlenarySessionResultCode;
-import com.ogongchill.nationalAssembly.service.code.ProposerCode;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getBillInfoList</code>오퍼레이션의 요청 파라미터임
@@ -20,10 +18,10 @@ public class BillInfoListRequest {
 
     private Integer numOfRows;
     private Integer pageNo;
-    @JsonProperty(value = "mem_name_check")
+    @JsonProperty(value = "mem_name_check") // 유효하지 않은 파라미터인듯함
     private String memNameCheck;
     @JsonProperty(value = "mem_name")
-    private String memName;
+    private String memberName;
     @JsonProperty(value = "hj_name")
     private String hanjaName;
     @JsonProperty(value = "ord")
@@ -72,20 +70,23 @@ public class BillInfoListRequest {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
         this.memNameCheck = builder.memNameCheck;
-        this.memName = builder.memName;
+        this.memberName = builder.memName;
         this.hanjaName = builder.hjName;
         this.ordinal = builder.ordinal;
         this.startOrdinal = builder.startOrdinal;
         this.endOrdinal = builder.endOrdinal;
+        this.processNum = builder.processNum;
+        this.startProcessNum = builder.startProcessNum;
+        this.endProcessNum = builder.endProcessNum;
         this.startProposeNum = builder.startProposeNum;
         this.endProposeNum = builder.endProposeNum;
         this.proposeNum = builder.proposeNum;
         this.startProposeDate = builder.startProposeDate;
         this.endProposeDate = builder.endProposeDate;
-        this.startCommitteeDt = builder.startCommitteeDt;
-        this.endCommitteeDt = builder.endCommitteeDt;
-        this.billKindCode = builder.billKindCd;
-        this.currentCommittee = builder.currCommittee;
+        this.startCommitteeDt = builder.startCommitteeDate;
+        this.endCommitteeDt = builder.endCommitteeDate;
+        this.billKindCode = builder.billKindCode;
+        this.currentCommittee = builder.currentCommittee;
         this.proposerCode = builder.proposerCode;
         this.pProcResultCode = builder.pProcResultCd;
         this.bProcResultCode = builder.bProcResultCd;
@@ -100,6 +101,7 @@ public class BillInfoListRequest {
     }
 
     public static class Builder {
+
         private Integer numOfRows;
         private Integer pageNo;
         private String memNameCheck;
@@ -111,15 +113,15 @@ public class BillInfoListRequest {
         private Integer processNum;
         private Integer startProcessNum;
         private Integer endProcessNum;
-        private Integer proposeNum;
         private Integer startProposeNum;
         private Integer endProposeNum;
+        private Integer proposeNum;
         private String startProposeDate;
         private String endProposeDate;
-        private String startCommitteeDt;
-        private String endCommitteeDt;
-        private String billKindCd;
-        private String currCommittee;
+        private String startCommitteeDate;
+        private String endCommitteeDate;
+        private String billKindCode;
+        private String currentCommittee;
         private String proposerCode;
         private String pProcResultCd;
         private String bProcResultCd;
@@ -209,22 +211,22 @@ public class BillInfoListRequest {
         }
 
         public Builder startCommitteeDt(String startCommitteeDt) {
-            this.startCommitteeDt = startCommitteeDt;
+            this.startCommitteeDate = startCommitteeDt;
             return this;
         }
 
         public Builder endCommitteeDt(String endCommitteeDt) {
-            this.endCommitteeDt = endCommitteeDt;
+            this.endCommitteeDate = endCommitteeDt;
             return this;
         }
 
-        public Builder billKindCd(String billKindCd) {
-            this.billKindCd = billKindCd;
+        public Builder billKindCd(BillKindCode billKindCode) {
+            this.billKindCode = billKindCode.name();
             return this;
         }
 
-        public Builder currCommittee(String currCommittee) {
-            this.currCommittee = currCommittee;
+        public Builder currCommittee(Committee currCommittee) {
+            this.currentCommittee = currCommittee.getCode();
             return this;
         }
 
@@ -280,8 +282,8 @@ public class BillInfoListRequest {
         return memNameCheck;
     }
 
-    public String getMemName() {
-        return memName;
+    public String getMemberName() {
+        return memberName;
     }
 
     public String getHanjaName() {
@@ -332,11 +334,11 @@ public class BillInfoListRequest {
         return endProposeDate;
     }
 
-    public String getStartCommitteeDt() {
+    public String getStartCommitteeDate() {
         return startCommitteeDt;
     }
 
-    public String getEndCommitteeDt() {
+    public String getEndCommitteeDate() {
         return endCommitteeDt;
     }
 
@@ -352,11 +354,11 @@ public class BillInfoListRequest {
         return proposerCode;
     }
 
-    public String pProcResultCd() {
+    public String pProcResultCode() {
         return pProcResultCode;
     }
 
-    public String bProcResultCd() {
+    public String bProcResultCode() {
         return bProcResultCode;
     }
 

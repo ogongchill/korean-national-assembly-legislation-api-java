@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.RecentMoorListItem;
-import com.ogongchill.nationalAssembly.service.code.BillCode;
+import com.ogongchill.nationalAssembly.core.code.BillKindCode;
+import com.ogongchill.nationalAssembly.core.code.Committee;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getRecentMoorListRequest</code>오퍼레이션의 요청 파라미터임
@@ -21,17 +22,17 @@ public class RecentMoorListRequest {
     @JsonProperty(value = "bill_kind_cd")
     private String billKindCode;
     @JsonProperty(value = "curr_committee")
-    private String currCommittee;
+    private String currentCommittee;
     @JsonProperty(value = "bill_name")
     private String billName;
     @JsonProperty(value = "start_age_cd")
-    private Integer startAgeCode;
+    private Integer startAgeCode; // 대수(현재 대수만 가능)
 
     private RecentMoorListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
         this.billKindCode = builder.billKindCd;
-        this.currCommittee = builder.currCommittee;
+        this.currentCommittee = builder.currentCommittee;
         this.billName = builder.billName;
         this.startAgeCode = builder.startAgeCode;
     }
@@ -41,10 +42,11 @@ public class RecentMoorListRequest {
     }
 
     public static class Builder {
+
         private Integer numOfRows;
         private Integer pageNo;
         private String billKindCd;
-        private String currCommittee;
+        private String currentCommittee;
         private String billName;
         private Integer startAgeCode;
 
@@ -58,13 +60,13 @@ public class RecentMoorListRequest {
             return this;
         }
 
-        public Builder billKindCode(BillCode billCode) {
-            this.billKindCd = billCode.name();
+        public Builder billKindCode(BillKindCode billKindCode) {
+            this.billKindCd = billKindCode.name();
             return this;
         }
 
-        public Builder currCommittee(String currCommittee) {
-            this.currCommittee = currCommittee;
+        public Builder currCommittee(Committee currentCommittee) {
+            this.currentCommittee = currentCommittee.getCode();
             return this;
         }
 
@@ -95,8 +97,8 @@ public class RecentMoorListRequest {
         return billKindCode;
     }
 
-    public String getCurrCommittee() {
-        return currCommittee;
+    public String getCurrentCommittee() {
+        return currentCommittee;
     }
 
     public String getBillName() {

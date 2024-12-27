@@ -6,11 +6,12 @@ import com.ogongchill.nationalAssembly.core.request.*;
 import com.ogongchill.nationalAssembly.core.response.*;
 import com.ogongchill.nationalAssembly.core.response.billAdditionalInfo.BillAdditionalInfoResponse;
 import com.ogongchill.nationalAssembly.core.response.billCommissionExaminationInfo.BillCommissionExaminationInfoResponse;
+import com.ogongchill.nationalAssembly.core.code.PlenarySessionResultCode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.ogongchill.nationalAssembly.service.code.BillCode;
-import com.ogongchill.nationalAssembly.service.code.ProposerCode;
+import com.ogongchill.nationalAssembly.core.code.BillKindCode;
+import com.ogongchill.nationalAssembly.core.code.ProposerCode;
 
 import okhttp3.OkHttpClient;
 
@@ -18,14 +19,15 @@ class NationalAssemblyLegislationServiceTest {
 
 	private static final String SERVICE_KEY = "65WaXo9KJDUa1A450QOIciMPg9NhtrgjoL0F6nCq3OcV7LAU3drzD5P537sEJpxZLWxZq9tHHZfpAbIiaINjbQ==";
 	private final OkHttpClient client = new OkHttpClient();
-	private NationalAssemblyLegislationApi api = NationalAssemblyLegislationService.from(SERVICE_KEY, client);
+	private final NationalAssemblyLegislationApi api = NationalAssemblyLegislationService.from(SERVICE_KEY, client);
 
 	@DisplayName("의안 목록 검색")
 	@Test
 	void getBillInfoList() {
 		BillInfoListRequest request = BillInfoListRequest.builder()
 			.proposerCode(ProposerCode.F01)
-			.endProposeDate("2024-11-25")
+			.bProcResultCd(PlenarySessionResultCode.E01)
+			.endProposeDate("2024-12-25")
 			.startProposeDate("2024-11-25")
 			.startOrdinal(22)
 			.endOrdinal(22)
@@ -64,7 +66,7 @@ class NationalAssemblyLegislationServiceTest {
 	void getJsictionComiteProcessList() {
 		JsictionComiteProcessListRequest request = JsictionComiteProcessListRequest.builder()
 			.startAgeCode(22)
-			.billKindCd(BillCode.B04)
+			.billKindCd(BillKindCode.B04)
 			.build();
 		JsictionComiteProcessListResponse response = api.getJsictionComiteProcessList(request);
 		System.out.println(response.toString());
@@ -75,7 +77,7 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getRecentMoorList() {
 		RecentMoorListRequest request = RecentMoorListRequest.builder()
-			.billKindCode(BillCode.B02)
+			.billKindCode(BillKindCode.B02)
 			.startAgeCode(22)
 			.pageNo(1)
 			.numOfRows(100)
@@ -89,8 +91,8 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getSessionRequestList() {
 		SessionRequestListRequest request = SessionRequestListRequest.builder()
-			.billKindCd(BillCode.B02)
-			.startAgeCd(22)
+			.billKindCode(BillKindCode.B04)
+			.startAgeCode(22)
 			.pageNo(1)
 			.numOfRows(100)
 			.build();
@@ -152,7 +154,7 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getCommitPetitionList() {
 		CommitPetitionListRequest request = CommitPetitionListRequest.builder()
-				.startAgeCd(22)
+				.startAgeCode(22)
 				.build();
 		CommitPetitionListResponse response = api.getCommitPetitionList(request);
 		System.out.println(response);
@@ -163,8 +165,8 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getMotionLawList() {
 		MotionLawListRequest request = MotionLawListRequest.builder()
-				.startOrd(22)
-				.endOrd(22)
+				.startOrdinal(22)
+				.endOrdinal(22)
 				.memName("이재명")
 				.build();
 		MotionLawListResponse response = api.getMotionLawList(request);

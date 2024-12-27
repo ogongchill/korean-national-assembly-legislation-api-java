@@ -1,9 +1,10 @@
-package com.ogongchill.nationalAssembly.service.code;
+package com.ogongchill.nationalAssembly.core.code;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public enum ProposerCode {
+
     F01("의원"),
     F02("위원장"),
     F03("정부"),

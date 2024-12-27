@@ -1,9 +1,10 @@
-package com.ogongchill.nationalAssembly.service.code;
+package com.ogongchill.nationalAssembly.core.code;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public enum CommitteeResultCode {
+
     D01("가결"),
     D02("부결"),
     D03("폐기"),

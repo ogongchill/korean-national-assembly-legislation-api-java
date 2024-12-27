@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.SessionRequestListItem;
-import com.ogongchill.nationalAssembly.service.code.BillCode;
+import com.ogongchill.nationalAssembly.core.code.BillKindCode;
+import com.ogongchill.nationalAssembly.core.code.Committee;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getSessionRequestList</code>요청 파라미터임
@@ -41,6 +42,7 @@ public class SessionRequestListRequest {
     }
 
     public static class Builder {
+
         private Integer numOfRows;
         private Integer pageNo;
         private Integer startAgeCode;
@@ -58,18 +60,18 @@ public class SessionRequestListRequest {
             return this;
         }
 
-        public Builder startAgeCd(Integer startAgeCd) {
-            this.startAgeCode = startAgeCd;
+        public Builder startAgeCode(Integer startAgeCode) {
+            this.startAgeCode = startAgeCode;
             return this;
         }
 
-        public Builder billKindCd(BillCode billCode) {
+        public Builder billKindCode(BillKindCode billCode) {
             this.billKindCode = billCode.name();
             return this;
         }
 
-        public Builder currCommittee(String currCommittee) {
-            this.currCommittee = currCommittee;
+        public Builder currentCommittee(Committee currentCommittee) {
+            this.currCommittee = currentCommittee.getCode();
             return this;
         }
 

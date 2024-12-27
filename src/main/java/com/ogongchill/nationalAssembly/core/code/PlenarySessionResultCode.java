@@ -1,4 +1,4 @@
-package com.ogongchill.nationalAssembly.service.code;
+package com.ogongchill.nationalAssembly.core.code;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
 본회의처리결과 코드
  */
 public enum PlenarySessionResultCode {
+
     E01("가결"),
     E02("부결"),
     E03("대안반영폐기"),

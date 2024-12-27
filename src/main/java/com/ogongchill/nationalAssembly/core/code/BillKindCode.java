@@ -1,9 +1,10 @@
-package com.ogongchill.nationalAssembly.service.code;
+package com.ogongchill.nationalAssembly.core.code;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
-public enum BillCode {
+public enum BillKindCode {
+
     B01("헌법개정"),
     B02("예산안"),
     B03("결산"),
@@ -23,12 +24,12 @@ public enum BillCode {
 
     private final String description;
 
-    BillCode(String description) {
+    BillKindCode(String description) {
         this.description = description;
     }
 
-    public BillCode find(String target) {
-       return  Arrays.stream(BillCode.values())
+    public BillKindCode find(String target) {
+       return  Arrays.stream(BillKindCode.values())
                 .filter(billCode -> billCode.description.equals(target))
                 .findFirst()
                 .orElseThrow(() -> new NoSuchElementException("no such bill code : " + target));

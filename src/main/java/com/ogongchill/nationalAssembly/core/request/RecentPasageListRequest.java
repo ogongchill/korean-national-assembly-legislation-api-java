@@ -16,9 +16,7 @@ import com.ogongchill.nationalAssembly.core.response.item.RecentRceptListItem;
 public class RecentPasageListRequest {
 
     private Integer numOfRows; // 한 페이지 결과 수, 기본값은 10
-
     private Integer pageNo; // 페이지 번호
-
     @JsonProperty(value = "bill_name")
     private String billName; // 의안명
 
@@ -33,6 +31,7 @@ public class RecentPasageListRequest {
     }
 
     public static class Builder {
+
         private Integer numOfRows;
         private Integer pageNo;
         private String billName;

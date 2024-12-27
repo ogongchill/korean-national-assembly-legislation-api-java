@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
 import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListResponse;
 import com.ogongchill.nationalAssembly.core.response.item.JsictionComiteProcessListItem;
-import com.ogongchill.nationalAssembly.service.code.BillCode;
+import com.ogongchill.nationalAssembly.core.code.BillKindCode;
+import com.ogongchill.nationalAssembly.core.code.Committee;
 
 /**
  * <a href="https://www.data.go.kr/data/3037286/openapi.do">IROS4_OA_DV_0401_OpenAPI활용가이드_의안정보(국회사무처)_v1.30<</a></href>의 <code>getJsictionComiteProcessList</code>오퍼레이션의 요청 파라미터임
@@ -23,14 +24,14 @@ public class JsictionComiteProcessListRequest {
     @JsonProperty(value = "bill_kind_cd")
     private String billKindCode;
     @JsonProperty(value = "curr_committee")
-    private String currCommittee;
+    private String currentCommittee;
 
     private JsictionComiteProcessListRequest(Builder builder) {
         this.numOfRows = builder.numOfRows;
         this.pageNo = builder.pageNo;
-        this.startAgeCode = builder.startAgeCd;
-        this.billKindCode = builder.billKindCd;
-        this.currCommittee = builder.currCommittee;
+        this.startAgeCode = builder.startAgeCode;
+        this.billKindCode = builder.billKindCode;
+        this.currentCommittee = builder.currentCommittee;
     }
 
     public static Builder builder() {
@@ -40,9 +41,9 @@ public class JsictionComiteProcessListRequest {
     public static class Builder {
         private Integer numOfRows;
         private Integer pageNo;
-        private Integer startAgeCd;
-        private String billKindCd;
-        private String currCommittee;
+        private Integer startAgeCode;
+        private String billKindCode;
+        private String currentCommittee;
 
         public Builder numOfRows(Integer numOfRows) {
             this.numOfRows = numOfRows;
@@ -55,17 +56,17 @@ public class JsictionComiteProcessListRequest {
         }
 
         public Builder startAgeCode(Integer startAgeCode) {
-            this.startAgeCd = startAgeCode;
+            this.startAgeCode = startAgeCode;
             return this;
         }
 
-        public Builder billKindCd(BillCode billCode) {
-            this.billKindCd = billCode.name();
+        public Builder billKindCd(BillKindCode billKindCode) {
+            this.billKindCode = billKindCode.name();
             return this;
         }
 
-        public Builder currCommittee(String currCommittee) {
-            this.currCommittee = currCommittee;
+        public Builder currentCommittee(Committee currentCommittee) {
+            this.currentCommittee = currentCommittee.getCode();
             return this;
         }
 
@@ -90,7 +91,7 @@ public class JsictionComiteProcessListRequest {
         return billKindCode;
     }
 
-    public String getCurrCommittee() {
-        return currCommittee;
+    public String getCurrentCommittee() {
+        return currentCommittee;
     }
 }

@@ -3,7 +3,6 @@ package com.ogongchill.nationalAssembly.core.request;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ogongchill.nationalAssembly.core.api.Operation;
-import com.ogongchill.nationalAssembly.core.response.item.BillInfoListItem;
 import com.ogongchill.nationalAssembly.core.response.item.BillPetitionMemberListItem;
 
 /**
