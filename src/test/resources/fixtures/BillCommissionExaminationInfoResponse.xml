@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <header>
+        <requestMsgID/>
+        <responseTime>2015-12-19 16:36:42.3642</responseTime>
+        <responseMsgID/>
+        <successYN/>
+        <resultCode>00</resultCode>
+        <resultMsg>NORMAL SERVICE.</resultMsg>
+    </header>
+    <body>
+        <JurisdictionExamination>
+            <item>
+                <committeeName>국방위원회</committeeName>
+                <docName1>검토보고서</docName1>
+                <docName2>심사보고서</docName2>
+                <hwpUrl1>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=BF529A1E-A369-BB8F-DED3-23517D970C39&amp;type=0
+                </hwpUrl1>
+                <hwpUrl2>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=C7AE41EC-A063-EAD2-CACF-AAFB8FC10998&amp;type=0
+                </hwpUrl2>
+                <pdfUrl1>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=BF529A1E-A369-BB8F-DED3-23517D970C39&amp;type=1
+                </pdfUrl1>
+                <pdfUrl2>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=C7AE41EC-A063-EAD2-CACF-AAFB8FC10998&amp;type=1
+                </pdfUrl2>
+                <presentDt>2014-11-20</presentDt>
+                <procDt>2015-07-07</procDt>
+                <procResultCd>수정가결</procResultCd>
+                <submitDt>2014-11-03</submitDt>
+            </item>
+        </JurisdictionExamination>
+        <JurisdictionMeeting>
+            <item>
+                <confDt>2014-11-20</confDt>
+                <confName>제329회 국회(정기회) 제7차 전체회의</confName>
+                <confResult>상정/제안설명/검토보고/대체토론/소위회부</confResult>
+                <fileUrl>http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM=044735</fileUrl>
+            </item>
+            <item>
+                <confDt>2015-07-01</confDt>
+                <confName>제334회 국회(임시회) 제3차 법률안심사소위</confName>
+                <confResult>상정/축조심사/의결(수정가결)</confResult>
+                <fileUrl>http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM=045286</fileUrl>
+            </item>
+            <item>
+                <confDt>2015-07-07</confDt>
+                <confName>제334회 국회(임시회) 제3차 전체회의</confName>
+                <confResult>상정/소위심사보고/찬반토론/의결(수정가결)</confResult>
+                <fileUrl>http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM=045344</fileUrl>
+            </item>
+        </JurisdictionMeeting>
+        <procExamination>
+            <item>
+                <hwpUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=B8DAABCB-85B9-B2DF-56F8-C9EDCF3ED60C&amp;type=0
+                </hwpUrl>
+                <pdfUrl>
+                    http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=B8DAABCB-85B9-B2DF-56F8-C9EDCF3ED60C&amp;type=1
+                </pdfUrl>
+                <presentDt>2015-07-15</presentDt>
+                <procDt>2015-08-11</procDt>
+                <procResultCd>원안가결</procResultCd>
+                <submitDt>2015-07-07</submitDt>
+            </item>
+        </procExamination>
+        <procMeeting>
+            <item>
+                <confDt>2015-07-15</confDt>
+                <confName>제335회 국회(임시회) 제4차 전체회의</confName>
+                <confResult>상정</confResult>
+                <fileUrl>http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM=045389</fileUrl>
+            </item>
+            <item>
+                <confDt>2015-08-11</confDt>
+                <confName>제336회 국회(임시회) 제1차 전체회의</confName>
+                <confResult>상정/의결(원안가결)</confResult>
+                <fileUrl>http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM=045433</fileUrl>
+            </item>
+        </procMeeting>
+        <comitExamination>
+            <item>
+                <comitName>기획재정위원회</comitName>
+                <presentDt/>
+                <procDt/>
+                <submitDt>2014-11-03</submitDt>
+            </item>
+        </comitExamination>
+        <commitMeeting/>
+    </body>
+</response>

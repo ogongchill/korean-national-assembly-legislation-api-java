@@ -2,28 +2,13 @@ package com.ogongchill.nationalAssembly.core.api;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import com.ogongchill.nationalAssembly.core.request.*;
+import com.ogongchill.nationalAssembly.core.response.*;
+import com.ogongchill.nationalAssembly.core.response.billAdditionalInfo.BillAdditionalInfoResponse;
+import com.ogongchill.nationalAssembly.core.response.billCommissionExaminationInfo.BillCommissionExaminationInfoResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.ogongchill.nationalAssembly.core.request.BillInfoListRequest;
-import com.ogongchill.nationalAssembly.core.request.BillPetitionMemberListRequest;
-import com.ogongchill.nationalAssembly.core.request.BillPromulgationInfoRequest;
-import com.ogongchill.nationalAssembly.core.request.BillReceiptInfoRequest;
-import com.ogongchill.nationalAssembly.core.request.JsictionComiteProcessListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentMoorListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentPasageListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentRceptListRequest;
-import com.ogongchill.nationalAssembly.core.request.SessionRequestListRequest;
-import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
-import com.ogongchill.nationalAssembly.core.response.BillPetitionMemberListResponse;
-import com.ogongchill.nationalAssembly.core.response.BillPromulgationInfoResponse;
-import com.ogongchill.nationalAssembly.core.response.BillReceiptInfoResponse;
-import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentPasageListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
-
-import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
 import com.ogongchill.nationalAssembly.service.code.BillCode;
 import com.ogongchill.nationalAssembly.service.code.ProposerCode;
 
@@ -136,12 +121,54 @@ class NationalAssemblyLegislationServiceTest {
 		assertNotNull(response);
 	}
 
-	@DisplayName("의안 공포 정보 조회 - 응답 확인 필요")
+	@DisplayName("의안 공포 정보 조회")
 	@Test
 	void getBillPromulgationInfo() {
 		BillPromulgationInfoRequest request = new BillPromulgationInfoRequest("PRC_X2X4V1W1V0V6D2D0C1A4B2Z3A6I3I7");
 		BillPromulgationInfoResponse response = api.getBillPromulgationInfo(request);
 		System.out.println(response.toString());
+		assertNotNull(response);
+	}
+
+	@DisplayName("의안 부가 정보 조회")
+	@Test
+	void getBillAdditionalInfo() {
+		BillAdditionalInfoRequest request = new BillAdditionalInfoRequest("PRC_X2X4V1W1V0V6D2D0C1A4B2Z3A6I3I7");
+		BillAdditionalInfoResponse response = api.getBillAdditionalInfo(request);
+		System.out.println(response.toString());
+		assertNotNull(response);
+	}
+
+	@DisplayName("의안 위원회심사 정보조회")
+	@Test
+	void getBillCommissionExaminationInfo() {
+		BillCommissionExaminationInfoRequest request = new BillCommissionExaminationInfoRequest("PRC_X2X4V1W1V0V6D2D0C1A4B2Z3A6I3I7");
+		BillCommissionExaminationInfoResponse response = api.getBillCommissionExaminationInfo(request);
+		System.out.println(response.toString());
+		assertNotNull(response);
+	}
+
+	@DisplayName("소관위원회 정보조회")
+	@Test
+	void getCommitPetitionList() {
+		CommitPetitionListRequest request = CommitPetitionListRequest.builder()
+				.startAgeCd(22)
+				.build();
+		CommitPetitionListResponse response = api.getCommitPetitionList(request);
+		System.out.println(response);
+		assertNotNull(response);
+	}
+
+	@DisplayName("발의법률안 목록 정보조회")
+	@Test
+	void getMotionLawList() {
+		MotionLawListRequest request = MotionLawListRequest.builder()
+				.startOrd(22)
+				.endOrd(22)
+				.memName("이재명")
+				.build();
+		MotionLawListResponse response = api.getMotionLawList(request);
+		System.out.println(response);
 		assertNotNull(response);
 	}
 }
