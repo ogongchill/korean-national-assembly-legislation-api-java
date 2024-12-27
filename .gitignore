@@ -9,3 +9,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+### test key ###
+**/src/test/resources/testKey.yaml
+
