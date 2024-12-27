@@ -30,20 +30,20 @@
 | **getBillPetitionMemberList** | 의안/청원 접수정보 국회의원 목록 조회 | ✅  |
 | **getBillPreliminaryExaminationInfo** | 의안 예비 심사 정보 조회 | 🔲 |
 | **getBillComprehensiveAuditInfo** | 의안 종합심사 정보 조회 | 🔲 |
-| **getBillCommissionExaminationInfo** | 의안 위원회심사 정보 조회 | 🔲 |
+| **getBillCommissionExaminationInfo** | 의안 위원회심사 정보 조회 | ✅ |
 | **getBillDeliverateInfo** | 의안 본회의심의 정보 조회 | 🔲 |
 | **getBillTransferredInfo** | 의안 정부이송 정보 조회 | 🔲 |
-| **getBillAdditionalInfo** | 의안 부가 정보 조회 | 🔲 |
+| **getBillAdditionalInfo** | 의안 부가 정보 조회 | ✅ |
 | **getPassRceptRecentList** | 처리의안 통계 (총괄) 정보 조회 | 🔲 |
 | **getRceptKndList** | 처리의안 통계 (의안종류별) 정보 조회 | 🔲 |
 | **getRceptMoorList** | 처리의안 통계 (위원회별) 정보 조회 | 🔲 |
 | **getProcessBillStaticInfoList** | 처리의안 통계 (법률안) 정보 조회 | 🔲 |
 | **getMooringBillStaticList** | 계류의안 통계 | 🔲 |
 | **getJudgeReportBodyList** | 심사보고서 내용 목록 정보 조회 | 🔲 |
-| **getMotionLawList** | 발의법률안 목록 정보 조회 | 🔲 |
+| **getMotionLawList** | 발의법률안 목록 정보 조회 | ✅ |
 | **getOfferReasonList** | 제안이유/주요내용 목록 정보 조회 | 🔲 |
 | **getPeriodList** | 회기정보 조회 | 🔲 |
-| **getCommitPetitionList** | 소관위원회 정보 조회 | 🔲 |
+| **getCommitPetitionList** | 소관위원회 정보 조회 | ✅ |
 | **getPetitionList** | 청원 목록 정보 조회 | 🔲 |
 | **getCommitPetitionProcessInfoList** | 청원 처리 목록 정보 조회 | 🔲 |
 | **getCommitPetitionMooringInfoList** | 청원 계류 목록 정보 조회 | 🔲 |
