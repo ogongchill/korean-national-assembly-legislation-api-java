@@ -2,25 +2,11 @@ package com.ogongchill.nationalAssembly.core.api;
 
 import com.ogongchill.nationalAssembly.core.api.util.UrlQueryParamConverter;
 import com.ogongchill.nationalAssembly.core.api.util.XmlParser;
-import com.ogongchill.nationalAssembly.core.request.BillInfoListRequest;
-import com.ogongchill.nationalAssembly.core.request.BillPetitionMemberListRequest;
-import com.ogongchill.nationalAssembly.core.request.BillPromulgationInfoRequest;
-import com.ogongchill.nationalAssembly.core.request.BillReceiptInfoRequest;
-import com.ogongchill.nationalAssembly.core.request.JsictionComiteProcessListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentMoorListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentPasageListRequest;
-import com.ogongchill.nationalAssembly.core.request.RecentRceptListRequest;
-import com.ogongchill.nationalAssembly.core.request.SessionRequestListRequest;
-import com.ogongchill.nationalAssembly.core.response.BillInfoListResponse;
-import com.ogongchill.nationalAssembly.core.response.BillPetitionMemberListResponse;
-import com.ogongchill.nationalAssembly.core.response.BillPromulgationInfoResponse;
-import com.ogongchill.nationalAssembly.core.response.BillReceiptInfoResponse;
-import com.ogongchill.nationalAssembly.core.response.JsictionComiteProcessListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentMoorListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentPasageListResponse;
-import com.ogongchill.nationalAssembly.core.response.RecentRceptListResponse;
-import com.ogongchill.nationalAssembly.core.response.SessionRequestListResponse;
+import com.ogongchill.nationalAssembly.core.request.*;
+import com.ogongchill.nationalAssembly.core.response.*;
 
+import com.ogongchill.nationalAssembly.core.response.billAdditionalInfo.BillAdditionalInfoResponse;
+import com.ogongchill.nationalAssembly.core.response.billCommissionExaminationInfo.BillCommissionExaminationInfoResponse;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -41,64 +27,72 @@ public class NationalAssemblyLegislationService implements NationalAssemblyLegis
 
     @Override
     public BillInfoListResponse getBillInfoList(BillInfoListRequest request) {
-        Request billInfoListRequest = UrlQueryParamConverter.createRequest(Operation.GET_BILL_INFO_LIST, request);
-        String responseBody = client.getResponseBodyString(billInfoListRequest);
-        return XmlParser.parse(responseBody, BillInfoListResponse.class);
+        return executeApiCall(Operation.GET_BILL_INFO_LIST, request, BillInfoListResponse.class);
     }
 
     @Override
     public RecentRceptListResponse getRecentRceptList(RecentRceptListRequest request) {
-        Request recentRceptListRequest = UrlQueryParamConverter.createRequest(Operation.GET_RECENT_RCEPT_LIST, request);
-        String responseBody = client.getResponseBodyString(recentRceptListRequest);
-        return XmlParser.parse(responseBody, RecentRceptListResponse.class);
+        return executeApiCall(Operation.GET_RECENT_RCEPT_LIST, request, RecentRceptListResponse.class);
     }
 
     @Override
     public RecentPasageListResponse getRecentPasageList(RecentPasageListRequest request) {
-        Request recentPasageListRequest = UrlQueryParamConverter.createRequest(Operation.GET_RECENT_PASAGE_LIST, request);
-        String responseBody = client.getResponseBodyString(recentPasageListRequest);
-        return XmlParser.parse(responseBody, RecentPasageListResponse.class);
+        return executeApiCall(Operation.GET_RECENT_PASAGE_LIST, request, RecentPasageListResponse.class);
     }
 
     @Override
     public JsictionComiteProcessListResponse getJsictionComiteProcessList(JsictionComiteProcessListRequest request) {
-        Request jsictionCmiteProcessListRequest = UrlQueryParamConverter.createRequest(Operation.GET_JSICTION_COMITE_PROCESS_LIST, request);
-        String responseBody = client.getResponseBodyString(jsictionCmiteProcessListRequest);
-        return XmlParser.parse(responseBody, JsictionComiteProcessListResponse.class);
+        return executeApiCall(Operation.GET_JSICTION_COMITE_PROCESS_LIST, request, JsictionComiteProcessListResponse.class);
     }
 
     @Override
     public RecentMoorListResponse getRecentMoorList(RecentMoorListRequest request) {
-        Request recentMoorListRequest = UrlQueryParamConverter.createRequest(Operation.GET_RECENT_MOOR_LIST, request);
-        String responseBody = client.getResponseBodyString(recentMoorListRequest);
-        return XmlParser.parse(responseBody, RecentMoorListResponse.class);
+        return executeApiCall(Operation.GET_RECENT_MOOR_LIST, request, RecentMoorListResponse.class);
     }
 
     @Override
     public SessionRequestListResponse getSessionRequestList(SessionRequestListRequest request) {
-        Request sessionRequestListRequest = UrlQueryParamConverter.createRequest(Operation.GET_SESSION_REQUEST_LIST, request);
-        String responseBody = client.getResponseBodyString(sessionRequestListRequest);
-        return XmlParser.parse(responseBody, SessionRequestListResponse.class);
+        return executeApiCall(Operation.GET_SESSION_REQUEST_LIST, request, SessionRequestListResponse.class);
     }
 
     @Override
     public BillReceiptInfoResponse getBillReceiptInfo(BillReceiptInfoRequest request) {
-        Request billReceiptInfoRequest = UrlQueryParamConverter.createRequest(Operation.GET_BILL_RECEIPT_INFO, request);
-        String responseBody = client.getResponseBodyString(billReceiptInfoRequest);
-        return XmlParser.parse(responseBody, BillReceiptInfoResponse.class);
+        return executeApiCall(Operation.GET_BILL_RECEIPT_INFO, request, BillReceiptInfoResponse.class);
     }
 
     @Override
     public BillPetitionMemberListResponse getBillPetitionMemberList(BillPetitionMemberListRequest request) {
-        Request billPetitionMemberListRequest = UrlQueryParamConverter.createRequest(Operation.GET_BILL_PETITION_MEMBER_LIST, request);
-        String responseBody = client.getResponseBodyString(billPetitionMemberListRequest);
-        return XmlParser.parse(responseBody, BillPetitionMemberListResponse.class);
+        return executeApiCall(Operation.GET_BILL_PETITION_MEMBER_LIST, request, BillPetitionMemberListResponse.class);
     }
 
     @Override
     public BillPromulgationInfoResponse getBillPromulgationInfo(BillPromulgationInfoRequest request) {
-        Request billPromulgationInfoRequest = UrlQueryParamConverter.createRequest(Operation.GET_BILL_PROMULGATION_INFO, request);
-        String responseBody = client.getResponseBodyString(billPromulgationInfoRequest);
-        return XmlParser.parse(responseBody, BillPromulgationInfoResponse.class);
+        return executeApiCall(Operation.GET_BILL_PROMULGATION_INFO, request, BillPromulgationInfoResponse.class);
+    }
+
+    @Override
+    public BillAdditionalInfoResponse getBillAdditionalInfo(BillAdditionalInfoRequest request) {
+        return executeApiCall(Operation.GET_BILL_ADDITIONAL_INFO, request, BillAdditionalInfoResponse.class);
+    }
+
+    @Override
+    public BillCommissionExaminationInfoResponse getBillCommissionExaminationInfo(BillCommissionExaminationInfoRequest request) {
+        return executeApiCall(Operation.GET_BILL_COMMISSION_EXAMINATION_INFO, request, BillCommissionExaminationInfoResponse.class);
+    }
+
+    @Override
+    public CommitPetitionListResponse getCommitPetitionList(CommitPetitionListRequest request) {
+        return executeApiCall(Operation.GET_COMMIT_PETITION_LIST, request, CommitPetitionListResponse.class);
+    }
+
+    @Override
+    public MotionLawListResponse getMotionLawList(MotionLawListRequest request) {
+        return executeApiCall(Operation.GET_MOTION_LAW_LIST, request, MotionLawListResponse.class);
+    }
+
+    private <T, R> T executeApiCall(Operation operation, R request, Class<T> responseType) {
+        Request apiRequest = UrlQueryParamConverter.createRequest(operation, request);
+        String responseBody = client.getResponseBodyString(apiRequest);
+        return XmlParser.parse(responseBody, responseType);
     }
 }

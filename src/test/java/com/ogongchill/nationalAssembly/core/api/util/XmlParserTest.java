@@ -1,7 +1,5 @@
 package com.ogongchill.nationalAssembly.core.api.util;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 
 import com.ogongchill.nationalAssembly.core.api.exception.ApiErrorException;
 import com.ogongchill.nationalAssembly.core.api.exception.UnexpectedResponseException;
@@ -13,7 +11,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.ogongchill.nationalAssembly.TestUtils;
-import com.ogongchill.nationalAssembly.core.response.BillPetitionMemberListResponse;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -45,7 +42,7 @@ class XmlParserTest {
     @DisplayName("xml과 response객체가 일치하지 않으면 UnexpectedResponseException을 던지는지 확인")
     @Test
     void testThrowUnexpectedResponseException() {
-        String sourceFile = TestUtils.readSourceFile(BILL_PETITION_MEMBER_LIST_RESPONSE_XML);
+        String sourceFile = TestUtils.readSourceFile("fixtures/BillPetitionMemberListResponse.xml");
 
         UnexpectedResponseException exception = Assert.assertThrows(UnexpectedResponseException.class,
                 () -> XmlParser.parse(sourceFile, BillInfoListResponse.class));
