@@ -78,7 +78,7 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getJsictionComiteProcessList() {
 		JsictionComiteProcessListRequest request = JsictionComiteProcessListRequest.builder()
-			.startAgeCd(22)
+			.startAgeCode(22)
 			.billKindCd(BillCode.B04)
 			.build();
 		JsictionComiteProcessListResponse response = api.getJsictionComiteProcessList(request);
@@ -90,8 +90,8 @@ class NationalAssemblyLegislationServiceTest {
 	@Test
 	void getRecentMoorList() {
 		RecentMoorListRequest request = RecentMoorListRequest.builder()
-			.billKindCd(BillCode.B02)
-			.startAgeCd(22)
+			.billKindCode(BillCode.B02)
+			.startAgeCode(22)
 			.pageNo(1)
 			.numOfRows(100)
 			.build();
