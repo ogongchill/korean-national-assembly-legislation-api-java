@@ -2,11 +2,13 @@ package com.ogongchill.nationalAssembly.core.api;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import com.ogongchill.nationalAssembly.TestUtils;
 import com.ogongchill.nationalAssembly.core.request.*;
 import com.ogongchill.nationalAssembly.core.response.*;
 import com.ogongchill.nationalAssembly.core.response.billAdditionalInfo.BillAdditionalInfoResponse;
 import com.ogongchill.nationalAssembly.core.response.billCommissionExaminationInfo.BillCommissionExaminationInfoResponse;
 import com.ogongchill.nationalAssembly.core.code.PlenarySessionResultCode;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,9 +19,14 @@ import okhttp3.OkHttpClient;
 
 class NationalAssemblyLegislationServiceTest {
 
-	private static final String SERVICE_KEY = "65WaXo9KJDUa1A450QOIciMPg9NhtrgjoL0F6nCq3OcV7LAU3drzD5P537sEJpxZLWxZq9tHHZfpAbIiaINjbQ==";
-	private final OkHttpClient client = new OkHttpClient();
-	private final NationalAssemblyLegislationApi api = NationalAssemblyLegislationService.from(SERVICE_KEY, client);
+    private NationalAssemblyLegislationApi api;
+
+	@BeforeEach
+	public void setUp() {
+        String serviceKey = TestUtils.readKey();
+        OkHttpClient client = new OkHttpClient();
+		api = NationalAssemblyLegislationService.from(serviceKey, client);
+	}
 
 	@DisplayName("의안 목록 검색")
 	@Test
